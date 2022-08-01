@@ -18,6 +18,7 @@
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/plugins.css') }}">
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/style.css') }}">
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/color.css') }}">
+	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/custom.css') }}">
 
 	@yield('styles')
 </head>
@@ -76,8 +77,8 @@
 
 			<!-- showshare -->
 			<div class="show-share showshare">
-				<i class="fal fa-retweet"></i>
-				<span>Paylaş</span>
+				<i class="fal fa-globe"></i>
+				<span>Dil</span>
 			</div>
 			<!-- showshare end -->
 
@@ -252,7 +253,7 @@
 		<!--  navigation bar end -->
 
 		<!-- wrapper -->
-		<div id="wrapper" class="{{ !segments(0) ? 'single-page-wrap' : null }}">
+		<div id="wrapper" class="{{ segments(0) ? 'single-page-wrap' : null }}">
 
 			@yield('content')
 
@@ -267,38 +268,38 @@
 						<div class="row">
 							<div class="col-md-2">
 								<div class="footer-title fl-wrap">
-									<span>Plasmak</span>
+									<span>Keşfet</span>
 								</div>
 							</div>
 							<div class="col-md-5">
 								<div class="footer-header fl-wrap">
 									<span>01.</span>
-									Last Tweets
+									Son Haberler
 								</div>
 								<div class="footer-box fl-wrap">
 									<div class="twitter-swiper-container fl-wrap" id="twitts-container"></div>
-									<a href="#" class="btn float-btn trsp-btn">
-										Follow
+									<a href="{{ site_url('') }}" class="btn float-btn trsp-btn">
+										Daha Fazlası
 									</a>
 								</div>
 							</div>
 							<div class="col-md-5">
 								<div class="footer-header fl-wrap">
 									<span>02.</span>
-									Subscribe / Contacts
+									Anlık E-Bülten / İletişim
 								</div>
 
 								<!-- footer-box -->
 								<div class="footer-box fl-wrap">
 									<p>
-										Want to be notified when we launch a new template or an update. Just sign up and we'll send you a notification by email.
+										Sizlere gereksiz e-posta göndermeyeceğimizin sözünü veriyoruz. E-posta kaydını gerçekleştirmeniz halinde işinize yarayacak bilgileri ve kampanyaları anlık olarak sizinle paylaşıyor olacağız.
 									</p>
 									<div class="subcribe-form fl-wrap">
 										<form class="fl-wrap" id="subscribe">
-											<input type="text" name="email" placeholder="email" class="enteremail" id="subscribe-email" spellcheck="false">
+											<input type="text" name="email" placeholder="E-posta adresinizi giriniz" class="enteremail" id="subscribe-email" spellcheck="false">
 											<button type="submit" class="subscribe-button" id="subscribe-button">
 												<i class="fal fa-paper-plane"></i>
-												Send
+												Gönder
 											</button>
 											<label for="subscribe-email" class="subscribe-message"></label>
 										</form>
@@ -309,23 +310,25 @@
 										<ul>
 											<li>
 												<i class="fal fa-phone"></i>
-												<span>Phone:</span>
+												<span>Telefon & Fax:</span>
 												<a href="#">
-													+489756412322
+													+90 212 671 74 59
 												</a>
 											</li>
 											<li>
 												<i class="fal fa-envelope"></i>
-												<span>Email:</span>
+												<span>E-posta:</span>
 												<a href="#">
-													yourmail@domain.com
+													info@plasmak.com.tr
 												</a>
 											</li>
 											<li>
 												<i class="fal fa-map-marker"></i>
-												<span>Address:</span>
+												<span>Adres:</span>
 												<a href="#">
-													USA 27TH Brooklyn NY
+													İkitelli OSB Demirciler San. Sit. E-1 Blok No:366
+													<br>
+													Başakşehir/İstanbul, Türkiye
 												</a>
 											</li>
 										</ul>
@@ -374,7 +377,7 @@
 
 						<!-- policy-box -->
 						<div class="policy-box">
-							<span>&copy; Plasmak {{ date('Y') }} / All rights reserved.</span>
+							<span>&copy; Plasmak {{ date('Y') }} / Tüm hakları saklıdır. Created by <a href="https://www.fiveajans.com" target="_blank" style="color: #fff; font-weight: bold">FIVE</a></span>
 						</div>
 						<!-- policy-box end -->
 
@@ -391,9 +394,9 @@
 			<!-- footer end -->
 
 			<!-- contact-btn -->
-			<a href="contacts.html" class="contact-btn color-bg">
-				<i class="fal fa-envelope"></i>
-				<span>Get in Touch</span>
+			<a href="{{ site_url('plasmakconnect') }}" class="contact-btn color-bg">
+				<i class="fal fa-external-link"></i>
+				<span>PlasmakConnect</span>
 			</a>
 			<!-- contact-btn end -->
 
@@ -403,14 +406,24 @@
 		<!-- share-wrapper -->
 		<div class="share-wrapper isShare">
 			<div class="share-title">
-				<span>Share</span>
+				<span>Dil</span>
 			</div>
 			<div class="close-share soa">
-				<span>Close</span>
+				<span>Kapat</span>
 				<i class="fal fa-times"></i>
 			</div>
 			<div class="share-inner soa">
-				<div class="share-container"></div>
+				<div class="language-container">
+					<a href="https://en.plasmak.com.tr" class="language-text">
+						ENGLISH
+					</a>
+					<a href="https://de.plasmak.com.tr" class="language-text">
+						DEUTSCH
+					</a>
+					<a href="https://ru.plasmak.com.tr" class="language-text">
+						Русский
+					</a>
+				</div>
 			</div>
 		</div>
 		<!-- share-wrapper end -->

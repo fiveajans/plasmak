@@ -14,38 +14,38 @@
 			<div class="mousey">
 				<div class="scroller"></div>
 			</div>
-			<span>Scroll Down</span>
+			<span>Aşağı Kaydır</span>
 		</div>
 		<nav class="scroll-nav scroll-init">
 			<ul>
 				<li>
 					<a href="#sec1" class="scroll-link act-link">
-						Hero
+						Plasmak Dünyası
 					</a>
 				</li>
 				<li>
 					<a href="#sec2" class="scroll-link">
-						About
+						Hakkımızda
 					</a>
 				</li>
 				<li>
 					<a href="#sec3" class="scroll-link">
-						Resume
+						Tarihçemiz
 					</a>
 				</li>
 				<li>
 					<a href="#sec4" class="scroll-link">
-						Skills
+						Yetkinliklerimiz
 					</a>
 				</li>
 				<li>
 					<a href="#sec5" class="scroll-link">
-						Projects
+						Ürünlerimiz
 					</a>
 				</li>
 				<li>
 					<a href="#sec6" class="scroll-link">
-						Clients
+						Kurulumuz
 					</a>
 				</li>
 			</ul>
@@ -102,16 +102,16 @@
 					<div class="half-slider-item fl-wrap">
 						<div class="half-hero-wrap">
 							<h1>
-								You Imagine
+								Güç
 								<br>
-								<span>Let's We Produce.</span>
+								<span>Üretimde.</span>
 							</h1>
 							<h4>
-								For More
+								Daha Fazlası İçin
 							</h4>
 							<div class="clearfix"></div>
 							<a href="#sec2" class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">
-								Let's Start
+								Şimdi Başla
 							</a>
 						</div>
 					</div>
@@ -121,16 +121,16 @@
 					<div class="half-slider-item fl-wrap">
 						<div class="half-hero-wrap">
 							<h1>
-								<span>Special</span>
+								<span>Sürekli Gelişim</span>
 								<br>
-								Product Design.
+								Zamanında Üretim.
 							</h1>
 							<h4>
-								For Service
+								Daha Fazlası İçin
 							</h4>
 							<div class="clearfix"></div>
 							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-								Show More
+								Ürünleri Keşfet
 							</a>
 						</div>
 					</div>
@@ -140,16 +140,16 @@
 					<div class="half-slider-item fl-wrap">
 						<div class="half-hero-wrap">
 							<h1>
-								Die
+								İnovatif
 								<br>
-								<span>Cut-in-Place.</span>
+								<span>Üretim.</span>
 							</h1>
 							<h4>
-								For Service
+								Daha Fazlası İçin
 							</h4>
 							<div class="clearfix"></div>
 							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-								Show More
+								Şimdi Başla
 							</a>
 						</div>
 					</div>
@@ -171,10 +171,9 @@
 			<!-- hero dec -->
 			<div class="half-bg-dec" data-ran="12"></div>
 			<div class="hero-decor-numb">
-				<span>41.0672357</span>
-				<span>28.8086735</span>
+				<span>Gücün Adresi</span>
 				<a href="https://goo.gl/maps/CCWLdZQoYHg1sv2W8" target="_blank" class="hero-decor-numb-tooltip">
-					Based In Istanbul
+					Plasmak Harita
 				</a>
 			</div>
 			<div class="pattern-bg"></div>
@@ -201,7 +200,7 @@
 					<div class="col-md-5">
 						<div class="collage-image fl-wrap">
 							<div class="collage-image-title" data-scrollax="properties: { translateY: '150px' }">
-								Plasmak.
+								Hakkımızda.
 							</div>
 							<img src="{{ asset_url('client/images/all/1.jpg') }}" alt="Plasmak" class="respimg">
 						</div>
@@ -209,17 +208,17 @@
 					<div class="col-md-7">
 						<div class="main-about fl-wrap">
 							<h5>
-								Curabitur convallis fringilla diam
+								Sektöründe Öncü Kuruluş
 							</h5>
 							<h2>
-								Innovative solutions
+								Güç üretimde
 								<br>
-								to boost
-								<span>your creative</span>
-								projects
+								<span>vizyonu</span> ile çalışıyor.
 							</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.
+								Plasmak, 2004 yılından bu yana termoform (ısı ile şekilleme) hakkımızda sektöründe yer almaktadır.
+								<br>
+								Yaptığı işlerde müşteri memnuniyetini esas alan firmamız, sektördeki eksikliği gidermek ve yurt dışından alınan maliyetli kalıpların önüne geçme amacı ile yerinde kesmeli kalıpların üretimine başlamış ve konusunda uzmanlaşmıştır.
 							</p>
 
 							<!-- features-box-container -->
@@ -229,13 +228,13 @@
 									<!-- features-box -->
 									<div class="features-box col-md-6">
 										<div class="time-line-icon">
-											<i class="fal fa-desktop"></i>
+											<i class="fab fa-accusoft"></i>
 										</div>
 										<h3>
-											Web Desig
+											Üretim
 										</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
+											Kalıp üretimi, insert, matbaa mandreli, erkek–dişi kesici imali gibi diğer kalıp takımlarınında imalatı, çağdaş iş anlayışı ile üretilmektedir.
 										</p>
 									</div>
 									<!-- features-box end -->
@@ -243,13 +242,13 @@
 									<!-- features-box -->
 									<div class="features-box col-md-6">
 										<div class="time-line-icon">
-											<i class="fal fa-mobile-android"></i>
+											<i class="fal fa-search"></i>
 										</div>
 										<h3>
-											UI/UX Design
+											Ar-Ge
 										</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
+											Sektörün ihtiyacı olan kaliteli ve hızlı hizmet verebilme anlayışını sürekli yansıtabilmek için, firmamız uzman kadrosu ile AR-GE çalışmalarına devam etmektedir.
 										</p>
 									</div>
 									<!-- features-box end -->
@@ -257,13 +256,13 @@
 									<!-- features-box -->
 									<div class="features-box col-md-6">
 										<div class="time-line-icon">
-											<i class="fab fa-pagelines"></i>
+											<i class="fal fa-asterisk"></i>
 										</div>
 										<h3>
-											Branding
+											İnovatif
 										</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
+											İnovatif mimarilerimizi bozmadan üretimde her daim geleceği planlayarak, almış olduğumuz geri bildirimleri dikkate alarak üretimde her zaman bir adım öndeyiz.
 										</p>
 									</div>
 									<!-- features-box end -->
@@ -271,13 +270,13 @@
 									<!-- features-box -->
 									<div class="features-box col-md-6">
 										<div class="time-line-icon">
-											<i class="fal fa-shopping-bag"></i>
+											<i class="fal fa-globe"></i>
 										</div>
 										<h3>
-											Ecommerce
+											Ulusal
 										</h3>
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque.
+											2004 yılından bu yana ulusal çapta hizmet etmenin yanı sıra sektörümüzde ihracatta öncü kurum olmanın ve bu doğrultuda üretim yapmanın gururunu yaşıyoruz.
 										</p>
 									</div>
 									<!-- features-box end  -->
@@ -287,7 +286,7 @@
 							<!-- features-box-container end -->
 
 							<a href="portfolio.html" class="btn float-btn flat-btn color-btn">
-								My Portfolio
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -306,16 +305,15 @@
 			<div class="container">
 				<div class="section-title">
 					<h2>
-						Some Interisting
-						<span>Facts</span>
+						<span>Rakamlardan</span>
 						<br>
-						About Me
+						Daha Fazlasıyız
 					</h2>
 					<p>
-						We started as a small, subdue, called hath give fourth. Them one over saying. So the god, greater. You. Us air Moved divide midst us fifth sea.
+						Yaptığı işlerde müşteri memnuniyetini esas alan firmamız, sektördeki eksikliği gidermek ve yurt dışından alınan maliyetli kalıpların önüne geçme amacı ile yerinde kesmeli kalıpların üretimine başlamış ve konusunda uzmanlaşmıştır.
 					</p>
 					<div class="horizonral-subtitle">
-						<span>Numbers</span>
+						<span>Farket</span>
 					</div>
 				</div>
 				<div class="fl-wrap facts-holder">
@@ -325,13 +323,13 @@
 						<div class="inline-facts">
 							<div class="milestone-counter">
 								<div class="stats animaper">
-									<div class="num" data-content="0" data-num="145">
+									<div class="num" data-content="0" data-num="14">
 										0
 									</div>
 								</div>
 							</div>
 							<h6>
-								Finished projects
+								İnovatif Ürünler
 							</h6>
 						</div>
 					</div>
@@ -342,13 +340,13 @@
 						<div class="inline-facts">
 							<div class="milestone-counter">
 								<div class="stats animaper">
-									<div class="num" data-content="0" data-num="357">
+									<div class="num" data-content="0" data-num="8">
 										0
 									</div>
 								</div>
 							</div>
 							<h6>
-								Happy customers
+								Ar-Ge Çalışmaları
 							</h6>
 						</div>
 					</div>
@@ -359,13 +357,13 @@
 						<div class="inline-facts">
 							<div class="milestone-counter">
 								<div class="stats animaper">
-									<div class="num" data-content="0" data-num="825">
+									<div class="num" data-content="0" data-num="8">
 										0
 									</div>
 								</div>
 							</div>
 							<h6>
-								Working hours
+								Makina Parkuru
 							</h6>
 						</div>
 					</div>
@@ -376,13 +374,13 @@
 						<div class="inline-facts">
 							<div class="milestone-counter">
 								<div class="stats animaper">
-									<div class="num" data-content="0" data-num="1124">
+									<div class="num" data-content="0" data-num="2512">
 										0
 									</div>
 								</div>
 							</div>
 							<h6>
-								Coffee Cups
+								Mutlu Müşteri
 							</h6>
 						</div>
 					</div>
@@ -396,7 +394,7 @@
 		<!-- section -->
 		<section data-scrollax-parent="true" id="sec3">
 			<div class="section-subtitle" data-scrollax="properties: { translateY: '-250px' }">
-				My Resume
+				Tarihçemiz
 				<span>//</span>
 			</div>
 			<div class="container">
@@ -404,14 +402,14 @@
 				<!-- section-title -->
 				<div class="section-title fl-wrap">
 					<h3>
-						Some Words About Me
+						Gücün Üretimde Olduğunu Anladık ve Sizler İçin İşe Başladık
 					</h3>
 					<h2>
-						My Awesome
-						<span>Story</span>
+						Geçmişten
+						<span>Günümüze</span>
 					</h2>
 					<p>
-						We started as a small, subdue, called hath give fourth. Them one over saying. So the god, greater. You. Us air Moved divide midst us fifth sea .
+						Her geçen gün üretim maaliyetleri makinalaşma ile düştü. Fakat ürün fiyatları değişmedi. Yurt dışında bazı firmalar bunu fırsat bilerek bizi kendilerine bağımlı hale getirmek istediler. Bizim böyle bir durumda bilgi, birikim ve mühendisliğimizi işimze katmamız ülkemiz ve sizler için şart haline geldi.
 					</p>
 				</div>
 				<!-- section-title end -->
@@ -617,13 +615,13 @@
 					<div class="col-md-6">
 						<div class="video-promo-text fl-wrap mar-top">
 							<h3>
-								My Video Presentation
+								Tanıtım Filmimiz
 							</h3>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat.
+								Bizi daha yakından tanımanız için üretim aşamalarımız, farklılıklarımız hakkında daha fazla bilgi için tanıtım filmimizi izleyebilirsiniz.
 							</p>
 							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-								My Youtube Chanel
+								YouTube Kanalımıza Gidin
 							</a>
 						</div>
 					</div>
@@ -635,139 +633,10 @@
 		<!-- section end -->
 
 		<!-- section -->
-		<section data-scrollax-parent="true">
-			<div class="section-subtitle" data-scrollax="properties: { translateY: '-250px' }">
-				<span>//</span>
-				How I Work
-			</div>
-			<div class="container">
-
-				<!-- section-title -->
-				<div class="section-title fl-wrap">
-					<h3>
-						How i Work
-					</h3>
-					<h2>
-						My Working
-						<span>Process</span>
-					</h2>
-					<p>
-						In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.
-					</p>
-				</div>
-				<!-- section-title end -->
-
-				<!-- process-wrap -->
-				<div class="process-wrap fl-wrap">
-					<ul>
-						<li>
-							<div class="time-line-icon">
-								<i class="fab fa-slideshare"></i>
-							</div>
-							<h4>
-								Discuss the project
-							</h4>
-							<div class="process-details">
-								<h6>
-									Duis autem vel eum iriure dolor
-								</h6>
-								<p>
-									Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.
-								</p>
-								<a href="#">
-									More Details
-								</a>
-							</div>
-							<span class="process-numder">01.</span>
-						</li>
-						<li>
-							<div class="time-line-icon">
-								<i class="fal fa-laptop"></i>
-							</div>
-							<h4>
-								Develop & elaborate
-							</h4>
-							<div class="process-details">
-								<h6>
-									In ut odio libero, at vulputate urna.
-								</h6>
-								<p>
-									Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.
-								</p>
-								<a href="#">
-									More Details
-								</a>
-							</div>
-							<span class="process-numder">02.</span>
-						</li>
-						<li>
-							<div class="time-line-icon">
-								<i class="fal fa-flag-checkered"></i>
-							</div>
-							<h4>
-								Final approvement
-							</h4>
-							<div class="process-details">
-								<h6>
-									Nulla posuere sapien vitae lectus suscipit
-								</h6>
-								<p>
-									Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.
-								</p>
-								<a href="#">
-									More Details
-								</a>
-							</div>
-							<span class="process-numder">03.</span>
-						</li>
-					</ul>
-				</div>
-				<!-- process-wrap end -->
-
-				<div class="fl-wrap mar-top">
-					<div class="srv-link-text">
-						<h4>
-							Need more info? Visit my services page:
-						</h4>
-						<a href="services.html" class="btn float-btn flat-btn color-btn">
-							My Services
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="bg-parallax-module" data-position-top="90" data-position-left="30" data-scrollax="properties: { translateY: '-150px' }"></div>
-			<div class="bg-parallax-module" data-position-top="80" data-position-left="80" data-scrollax="properties: { translateY: '350px' }"></div>
-			<div class="sec-lines"></div>
-		</section>
-		<!-- section end -->
-
-		<!-- section-->
-		<section class="parallax-section dark-bg sec-half parallax-sec-half-left" data-scrollax-parent="true" id="sec4">
-			<div class="bg par-elem" data-bg="{{ asset_url('client/images/bg/4.jpg') }}" data-scrollax="properties: { translateY: '30%' }"></div>
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="section-title">
-					<h2>
-						My Own <span>Developer's</span> and
-						<br>
-						Design Skills
-					</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat.
-					</p>
-					<div class="horizonral-subtitle">
-						<span>Power</span>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- section end -->
-
-		<!-- section -->
-		<section data-scrollax-parent="true">
+		<section data-scrollax-parent="true" id="sec4">
 			<div class="section-subtitle right-pos"  data-scrollax="properties: { translateY: '-250px' }" >
 				<span>//</span>
-				attainments
+				Yetkinlikler
 			</div>
 			<div class="container">
 
@@ -777,10 +646,10 @@
 						<div class="col-md-4">
 							<div class="pr-title fl-wrap">
 								<h3>
-									Design Skills
+									Özverilerimiz
 								</h3>
 								<span>
-									Lorem Ipsum generators on the Internet king this the first true generator
+									Gücün üretimde olduğunun bilinci ile kendimizi geliştirmekten bir gün bile ödün vermiyoruz.
 								</span>
 							</div>
 							<div class="ci-num">
@@ -795,32 +664,32 @@
 
 									<!-- 1 -->
 									<div class="piechart">
-										<span class="chart" data-percent="85">
+										<span class="chart" data-percent="92">
 											<span class="percent"></span>
 										</span>
 										<h4>
-											Design
+											Planlama
 										</h4>
 									</div>
 									<!-- 1 end -->
 									<!-- 2 -->
 									<div class="piechart">
-										<span class="chart" data-percent="95">
+										<span class="chart" data-percent="94">
 											<span class="percent"></span>
 										</span>
 										<h4>
-											Branding
+											Geliştirme
 										</h4>
 									</div>
 									<!-- 2 end -->
 									<!-- 3 -->
 									<div class="piechart">
-										<span class="chart" data-percent="80">
+										<span class="chart" data-percent="90">
 											<span class="percent"></span>
 										</span>
 										<div class="clearfix"></div>
 										<h4>
-											Ecommerce
+											Üretim
 										</h4>
 									</div>
 									<!-- 3 end -->
@@ -841,9 +710,9 @@
 						<div class="col-md-4">
 							<div class="pr-title fl-wrap">
 								<h3>
-									Developer Skills
+									Üretim
 								</h3>
-								<span>Lorem Ipsum generators on the Internet king this the first true generator</span>
+								<span>Üretimde özverili çalışarak her geçen gün kendimizi yeniliyoruz.</span>
 							</div>
 							<div class="ci-num">
 								<span>02. -</span>
@@ -854,10 +723,10 @@
 
 								<!-- skill 1-->
 								<div class="custom-skillbar-title">
-									<span>Photoshop</span>
+									<span>Yerinde Kesmeli Kalıp</span>
 								</div>
 								<div class="skill-bar-percent">
-									95%
+									%95
 								</div>
 								<div class="skillbar-bg" data-percent="95%">
 									<div class="custom-skillbar"></div>
@@ -865,34 +734,34 @@
 
 								<!-- skill 2 -->
 								<div class="custom-skillbar-title">
-									<span>jQuery</span>
+									<span>Özel Ürün Dizaynı</span>
 								</div>
 								<div class="skill-bar-percent">
-									65%
+									%96
 								</div>
-								<div class="skillbar-bg" data-percent="65%">
+								<div class="skillbar-bg" data-percent="96%">
 									<div class="custom-skillbar"></div>
 								</div>
 
 								<!-- skill 3 -->
 								<div class="custom-skillbar-title">
-									<span>HTML5</span>
+									<span>Kalıp Takım Elemanları</span>
 								</div>
 								<div class="skill-bar-percent">
-									75%
+									%98
 								</div>
-								<div class="skillbar-bg" data-percent="75%">
+								<div class="skillbar-bg" data-percent="98%">
 									<div class="custom-skillbar"></div>
 								</div>
 
 								<!-- skill 4 -->
 								<div class="custom-skillbar-title">
-									<span>PHP</span>
+									<span>Termoform Kalıp</span>
 								</div>
 								<div class="skill-bar-percent">
-									71%
+									%95
 								</div>
-								<div class="skillbar-bg" data-percent="71%">
+								<div class="skillbar-bg" data-percent="95%">
 									<div class="custom-skillbar"></div>
 								</div>
 							</div>
@@ -907,9 +776,9 @@
 						<div class="col-md-4">
 							<div class="pr-title fl-wrap">
 								<h3>
-									Language Skills
+									İhracat
 								</h3>
-								<span>Lorem Ipsum generators on the Internet king this the first true generator</span>
+								<span>Sektöründe lider olmak kolay değil, ihracatta sizlere layık olmaya çalışıyoruz.</span>
 							</div>
 							<div class="ci-num">
 								<span>03. - </span>
@@ -923,30 +792,34 @@
 
 									<!-- 1 -->
 									<div class="piechart" >
-										<span class="chart" data-percent="85">
+										<span class="chart" data-percent="20">
 											<span class="percent"></span>
 										</span>
-										<h4>French</h4>
+										<h4>
+											Almanya
+										</h4>
 									</div>
 									<!-- 1 end -->
 
 									<!-- 2 -->
 									<div class="piechart">
-										<span class="chart" data-percent="95">
+										<span class="chart" data-percent="25">
 											<span class="percent"></span>
 										</span>
-										<h4>Dutch</h4>
+										<h4>
+											Rusya
+										</h4>
 									</div>
 									<!-- 2 end -->
 
 									<!-- 3 -->
 									<div class="piechart">
-										<span class="chart" data-percent="80">
+										<span class="chart" data-percent="55">
 											<span class="percent"></span>
 										</span>
 										<div class="clearfix"></div>
 										<h4>
-											Portugese
+											Diğer
 										</h4>
 									</div>
 									<!-- 3 end-->
@@ -974,13 +847,13 @@
 			<div class="fet_pr-carousel-title">
 				<div class="fet_pr-carousel-title-item">
 					<h3>
-						My Featured Projects
+						Üretim
 					</h3>
 					<p>
-						In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.
+						Çağdaş iş anlaşı ile üretim yaparak teknolojiye yön vererek geleceğe ortak olmanızı sağlıyoruz.
 					</p>
 					<a href="portfolio.html" class="btn float-btn flat-btn color-btn mar-top">
-						My Portfolio
+						Daha Fazla
 					</a>
 				</div>
 			</div>
@@ -1156,14 +1029,14 @@
 			<div class="container">
 				<div class="section-title fl-wrap">
 					<h3>
-						Reviews
+						Sizler İçin Çalışan
 					</h3>
 					<h2>
-						My Clients and
-						<span>Testimonials</span>
+						Yönetim
+						<span>Kurulumuz</span>
 					</h2>
 					<p>
-						In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.
+						Plasmak, profesyonel yönetim yaklaşımı kapsamında kurumsal yönetim ilkelerine öncelik ve önem vermektedir. Bu sebeple, hissedarları arasında fark gözetmez ve bütün faaliyet alanlarında etik kurallara uygun biçimde hareket eder.
 					</p>
 				</div>
 			</div>
@@ -1189,7 +1062,6 @@
 							<div class="popup-avatar">
 								<img src="{{ asset_url('client/images/avatar/1.jpg') }}" alt="">
 							</div>
-							<div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
 							</div>
@@ -1197,7 +1069,7 @@
 								"In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt ut laoreet dolore magna aliquam erat."
 							</p>
 							<a href="#" class="testim-link">
-								Via Facebook
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -1209,7 +1081,6 @@
 							<div class="popup-avatar">
 								<img src="{{ asset_url('client/images/avatar/2.jpg') }}" alt="">
 							</div>
-							<div class="listing-rating card-popup-rainingvis" data-starrating2="4"></div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
 							</div>
@@ -1217,7 +1088,7 @@
 								"In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt ut laoreet dolore magna aliquam erat."
 							</p>
 							<a href="#" class="testim-link">
-								Via Facebook
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -1229,7 +1100,6 @@
 							<div class="popup-avatar">
 								<img src="{{ asset_url('client/images/avatar/3.jpg') }}" alt="">
 							</div>
-							<div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
 							</div>
@@ -1237,7 +1107,7 @@
 								"In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt ut laoreet dolore magna aliquam erat."
 							</p>
 							<a href="#" class="testim-link">
-								Via Facebook
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -1249,7 +1119,6 @@
 							<div class="popup-avatar">
 								<img src="{{ asset_url('client/images/avatar/4.jpg') }}" alt="">
 							</div>
-							<div class="listing-rating card-popup-rainingvis" data-starrating2="5"></div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
 							</div>
@@ -1257,7 +1126,7 @@
 								"In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonu mmy nibh euismod tincidunt ut laoreet dolore magna aliquam erat."
 							</p>
 							<a href="#" class="testim-link">
-								Via Facebook
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -1267,8 +1136,7 @@
 			</div>
 			<!-- slider-carousel-wrap end -->
 
-			<!-- client-list -->
-			<div class="fl-wrap">
+			<!--<div class="fl-wrap">
 				<div class="container">
 					<ul class="client-list client-list-white">
 						<li>
@@ -1298,9 +1166,7 @@
 						</li>
 					</ul>
 				</div>
-				<!-- client-list end -->
-
-			</div>
+			</div>-->
 			<div class="sec-lines"></div>
 		</section>
 		<!-- section end -->
@@ -1311,12 +1177,12 @@
 				<div class="row">
 					<div class="col-md-8">
 						<h3>
-							Ready To order Your Project?
+							Geleceğe yön vermeye hazır mısınız?
 						</h3>
 					</div>
 					<div class="col-md-4">
 						<a href="contacts.html" class="btn flat-btn color-btn">
-							Get In Touch
+							Bize Ulaşın
 						</a>
 					</div>
 				</div>

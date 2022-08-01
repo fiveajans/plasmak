@@ -7,28 +7,13 @@ $app->router->notFound(function () {
 
 $app->router->get('/', 'Client.Home@index');
 
-$app->router->group('/about', function ($router) {
+$app->router->get('/plasmakconnect', 'Connect.Login@index');
 
-	$router->get('/', 'Client.About@index');
-	$router->get('/detail', 'Client.About@detail');
+$app->router->group('/plasmak-dunyasi', function ($router) {
 
-});
-
-$app->router->group('/products', function ($router) {
-
-	$router->get('/', 'Client.Products@index');
-	$router->get('/:slug', 'Client.Products@detail');
+	$router->get('/kisaca-plasmak', 'Client.PlasmakWorld@plasmakInShort');
 
 });
-
-$app->router->group('/career', function ($router) {
-
-	$router->get('/', 'Client.Career@index');
-	$router->any('/join-us', 'Client.Career@joinUs');
-
-});
-
-$app->router->get('/contact', 'Client.Contact@index');
 
 $app->router->group('/admin', function ($router) {
 
