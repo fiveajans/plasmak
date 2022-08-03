@@ -788,12 +788,16 @@ function initSolonick() {
         }, 800);
         return false;
     });
+
+	// TODO: to-top-letter yazısını düzelt.
     $("<div class='to-top-letter'>t</div><div class='to-top-letter'>o</div><div class='to-top-letter'>p</div>").appendTo(".to-top span");
-    //   Blog filter ------------------
+    
+	//   Blog filter ------------------
     $(".blog-btn").on("click", function () {
         $(this).parent(".blog-btn-filter").find("ul").slideToggle(500);
         return false;
     });
+
     $('.hero-decor-let').rotaterator({fadeSpeed:500, pauseSpeed:1200});
 }
 //   Parallax ------------------

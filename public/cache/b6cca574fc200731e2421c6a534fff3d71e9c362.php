@@ -1,25 +1,26 @@
-@extends('admin.layouts.main')
 
-@section('styles')
+
+<?php $__env->startSection('styles'); ?>
 
 	<!-- Summernote CSS -->
-	<link rel="stylesheet" href="{{ asset_url('admin/vendor/summernote/summernote-bs4.css') }}">
+	<link rel="stylesheet" href="<?php echo e(asset_url('admin/vendor/summernote/summernote-bs4.css')); ?>">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
-	@if ($message)
+	<?php if($message): ?>
 
 		<div class="row gutters mb-2">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="alert alert-{{ $message['class'] }}">
-					{{ $message['text'] }}
+				<div class="alert alert-<?php echo e($message['class']); ?>">
+					<?php echo e($message['text']); ?>
+
 				</div>
 			</div>
 		</div>
 
-	@endif
+	<?php endif; ?>
 
 	<!-- Row start -->
 	<div class="row gutters">
@@ -41,7 +42,7 @@
 								
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<input type="text" name="name" value="{{ $old['name'] ?? null }}" required class="form-control">
+									<input type="text" name="name" value="<?php echo e($old['name'] ?? null); ?>" required class="form-control">
 									<div class="field-placeholder">
 										Ürün Adı
 										<span class="text-danger">*</span>
@@ -67,7 +68,7 @@
 								
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<input type="text" name="video" value="{{ $old['video'] ?? null }}" placeholder="YouTube Adresi" class="form-control">
+									<input type="text" name="video" value="<?php echo e($old['video'] ?? null); ?>" placeholder="YouTube Adresi" class="form-control">
 									<div class="field-placeholder">
 										Ürün Videosu
 									</div>
@@ -81,13 +82,14 @@
 								<div class="field-wrapper">
 									<select name="category_id" class="form-control" required>
 										
-										@foreach ($categories as $category)
+										<?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-											<option value="{{ $category->id }}">
-												{{ $category->name }}
+											<option value="<?php echo e($category->id); ?>">
+												<?php echo e($category->name); ?>
+
 											</option>
 
-										@endforeach
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 									</select>
 									<div class="field-placeholder">
@@ -102,7 +104,7 @@
 
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<textarea name="description" rows="10" required class="form-control">{{ $old['description'] ?? null }}</textarea>
+									<textarea name="description" rows="10" required class="form-control"><?php echo e($old['description'] ?? null); ?></textarea>
 									<div class="field-placeholder">
 										Açıklama
 										<span class="text-danger">*</span>
@@ -115,7 +117,7 @@
 
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<textarea name="content" class="summernote">{{ $old['content'] ?? null }}</textarea>
+									<textarea name="content" class="summernote"><?php echo e($old['content'] ?? null); ?></textarea>
 									<div class="field-placeholder">
 										İçerik
 										<span class="text-danger">*</span>
@@ -141,12 +143,12 @@
 	</div>
 	<!-- Row end -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
 
 	<!-- Summernote JS -->
-	<script src="{{ asset_url('admin/vendor/summernote/summernote-bs4.js') }}"></script>
+	<script src="<?php echo e(asset_url('admin/vendor/summernote/summernote-bs4.js')); ?>"></script>
 
 	<script>
 		// Summernote
@@ -166,4 +168,6 @@
 		});
 	</script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/admin/pages/products/create.blade.php ENDPATH**/ ?>

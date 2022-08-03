@@ -27,3 +27,7 @@
 .language-container .language-text:last-child {
 	margin: 0;
 }
+
+.hero-start-link span:before {
+	content: "Kaydır";
+}

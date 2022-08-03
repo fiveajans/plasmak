@@ -1,28 +1,29 @@
-@extends('admin.layouts.main')
 
-@section('styles')
+
+<?php $__env->startSection('styles'); ?>
 
 	<!-- Gallery css -->
-	<link rel="stylesheet" href="{{ asset_url('admin/vendor/gallery/gallery.css') }}">
+	<link rel="stylesheet" href="<?php echo e(asset_url('admin/vendor/gallery/gallery.css')); ?>">
 
 	<!-- Summernote CSS -->
-	<link rel="stylesheet" href="{{ asset_url('admin/vendor/summernote/summernote-bs4.css') }}">
+	<link rel="stylesheet" href="<?php echo e(asset_url('admin/vendor/summernote/summernote-bs4.css')); ?>">
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
 
-	@if ($message)
+	<?php if($message): ?>
 
 		<div class="row gutters mb-2">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-				<div class="alert alert-{{ $message['class'] }}">
-					{{ $message['text'] }}
+				<div class="alert alert-<?php echo e($message['class']); ?>">
+					<?php echo e($message['text']); ?>
+
 				</div>
 			</div>
 		</div>
 
-	@endif
+	<?php endif; ?>
 
 	<!-- Row start -->
 	<div class="row gutters">
@@ -44,7 +45,7 @@
 								
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<input type="text" name="name" value="{{ $product->name }}" required class="form-control">
+									<input type="text" name="name" value="<?php echo e($product->name); ?>" required class="form-control">
 									<div class="field-placeholder">
 										Ürün Adı
 										<span class="text-danger">*</span>
@@ -69,7 +70,7 @@
 								
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<input type="text" name="video" value="{{ $product->video }}" placeholder="YouTube Adresi" class="form-control">
+									<input type="text" name="video" value="<?php echo e($product->video); ?>" placeholder="YouTube Adresi" class="form-control">
 									<div class="field-placeholder">
 										Ürün Videosu
 									</div>
@@ -78,7 +79,7 @@
 
 							</div>
 
-							@if ($images->rowCount())
+							<?php if($images->rowCount()): ?>
 
 								<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
 
@@ -88,28 +89,28 @@
 										<!-- Row start -->
 										<div class="row g-2">
 
-											@foreach ($images as $image)
+											<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-												<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6" id="image-{{ $image->id }}" data-default="{{ $image->id == $product->default_image ? 'true' : 'false' }}">
-													<a href="{{ upload_url('images/original/products/' . $image->url) }}" class="effects">
-														<img src="{{ upload_url('images/cache/products/800x530/' . $image->url) }}" alt="{{ $product->name }}" class="img-fluid">
+												<div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-6" id="image-<?php echo e($image->id); ?>" data-default="<?php echo e($image->id == $product->default_image ? 'true' : 'false'); ?>">
+													<a href="<?php echo e(upload_url('images/original/products/' . $image->url)); ?>" class="effects">
+														<img src="<?php echo e(upload_url('images/cache/products/800x530/' . $image->url)); ?>" alt="<?php echo e($product->name); ?>" class="img-fluid">
 														<div class="overlay">
 															<span class="expand">+</span>
 														</div>
 													</a>
 													<div class="text-center action-image">
 														
-														@if ($image->id != $product->default_image)
+														<?php if($image->id != $product->default_image): ?>
 
-															<i onclick="defaultImage({{ $image->id }}, {{ $product->id }})" class="icon-check-circle text-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Varsayılan Yap"></i>
+															<i onclick="defaultImage(<?php echo e($image->id); ?>, <?php echo e($product->id); ?>)" class="icon-check-circle text-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Varsayılan Yap"></i>
 
-														@endif
+														<?php endif; ?>
 
-														<i onclick="deleteImage({{ $image->id }})" class="icon-x-circle text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Sil"></i>
+														<i onclick="deleteImage(<?php echo e($image->id); ?>)" class="icon-x-circle text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Sil"></i>
 													</div>
 												</div>
 
-											@endforeach
+											<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 										</div>
 										<!-- Row end -->
@@ -119,7 +120,7 @@
 
 								</div>
 
-							@endif
+							<?php endif; ?>
 
 							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
@@ -127,13 +128,14 @@
 								<div class="field-wrapper">
 									<select name="category_id" class="form-control" required>
 										
-										@foreach ($categories as $category)
+										<?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-											<option value="{{ $category->id }}" {{ $category->id == $product->category_id ? 'selected' : null }}>
-												{{ $category->name }}
+											<option value="<?php echo e($category->id); ?>" <?php echo e($category->id == $product->category_id ? 'selected' : null); ?>>
+												<?php echo e($category->name); ?>
+
 											</option>
 
-										@endforeach
+										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 									</select>
 									<div class="field-placeholder">
@@ -148,7 +150,7 @@
 
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<textarea name="description" rows="10" required class="form-control">{{ $product->description }}</textarea>
+									<textarea name="description" rows="10" required class="form-control"><?php echo e($product->description); ?></textarea>
 									<div class="field-placeholder">
 										Açıklama
 										<span class="text-danger">*</span>
@@ -161,7 +163,7 @@
 
 								<!-- Field wrapper start -->
 								<div class="field-wrapper">
-									<textarea name="content" class="summernote">{{ $product->content }}</textarea>
+									<textarea name="content" class="summernote"><?php echo e($product->content); ?></textarea>
 									<div class="field-placeholder">
 										İçerik
 										<span class="text-danger">*</span>
@@ -187,14 +189,14 @@
 	</div>
 	<!-- Row end -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
 
 	<!-- Gallery JS -->
-	<script src="{{ asset_url('admin/vendor/gallery/baguetteBox.js') }}"></script>
-	<script src="{{ asset_url('admin/vendor/gallery/plugins.js') }}"></script>
-	<script src="{{ asset_url('admin/vendor/gallery/custom-gallery.js') }}"></script>
+	<script src="<?php echo e(asset_url('admin/vendor/gallery/baguetteBox.js')); ?>"></script>
+	<script src="<?php echo e(asset_url('admin/vendor/gallery/plugins.js')); ?>"></script>
+	<script src="<?php echo e(asset_url('admin/vendor/gallery/custom-gallery.js')); ?>"></script>
 
 	<script>
 		function deleteImage(id) {
@@ -283,7 +285,7 @@
 							icon: 'success',
 							confirmButtonText: 'Tamam'
 						}).then(function() {
-                            window.location = "{{ site_url('admin/products/update/' . $product->id) }}";
+                            window.location = "<?php echo e(site_url('admin/products/update/' . $product->id)); ?>";
                         });;
 
 					}
@@ -295,7 +297,7 @@
 	</script>
 
 	<!-- Summernote JS -->
-	<script src="{{ asset_url('admin/vendor/summernote/summernote-bs4.js') }}"></script>
+	<script src="<?php echo e(asset_url('admin/vendor/summernote/summernote-bs4.js')); ?>"></script>
 
 	<script>
 		// Summernote
@@ -315,4 +317,6 @@
 		});
 	</script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/admin/pages/products/update.blade.php ENDPATH**/ ?>

@@ -1,12 +1,12 @@
-@extends('client.layouts.main')
 
-@section('title', 'Güç Üretimde')
-@section('description', 'Açıklama.')
 
-@section('styles')
-@endsection
+<?php $__env->startSection('title', 'Güç Üretimde'); ?>
+<?php $__env->startSection('description', 'Açıklama.'); ?>
 
-@section('content')
+<?php $__env->startSection('styles'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
 
 	<!-- scroll-nav-wrap -->
 	<div class="scroll-nav-wrap">
@@ -67,21 +67,21 @@
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/3.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
+						<div class="bg" data-bg="<?php echo e(asset_url('client/images/3.jpg')); ?>" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
 					<!-- half-slider-img item end -->
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/1.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
+						<div class="bg" data-bg="<?php echo e(asset_url('client/images/1.jpg')); ?>" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
 					<!-- half-slider-img item end -->
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/2.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
+						<div class="bg" data-bg="<?php echo e(asset_url('client/images/2.jpg')); ?>" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
 					<!-- half-slider-img item end -->
@@ -202,7 +202,7 @@
 							<div class="collage-image-title" data-scrollax="properties: { translateY: '150px' }">
 								Hakkımızda.
 							</div>
-							<img src="{{ asset_url('client/images/all/1.jpg') }}" alt="Plasmak" class="respimg">
+							<img src="<?php echo e(asset_url('client/images/all/1.jpg')); ?>" alt="Plasmak" class="respimg">
 						</div>
 					</div>
 					<div class="col-md-7">
@@ -300,7 +300,7 @@
 
 		<!-- section -->
 		<section class="parallax-section dark-bg sec-half parallax-sec-half-right" data-scrollax-parent="true">
-			<div class="bg par-elem" data-bg="{{ asset_url('client/images/bg/6.jpg') }}" data-scrollax="properties: { translateY: '30%' }"></div>
+			<div class="bg par-elem" data-bg="<?php echo e(asset_url('client/images/bg/6.jpg')); ?>" data-scrollax="properties: { translateY: '30%' }"></div>
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="section-title">
@@ -435,7 +435,7 @@
 								</div>
 							</div>
 							<div class="col-md-4">
-								<img src="{{ asset_url('client/images/all/4.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '-170px' }">
+								<img src="<?php echo e(asset_url('client/images/all/4.jpg')); ?>" alt="" class="respimg" data-scrollax="properties: { translateY: '-170px' }">
 							</div>
 							<div class="col-md-4">
 								<div class="custom-inner-content fl-wrap">
@@ -494,7 +494,7 @@
 								</div>
 							</div>
 							<div class="col-md-3">
-								<img src="{{ asset_url('client/images/all/8.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '270px' }">
+								<img src="<?php echo e(asset_url('client/images/all/8.jpg')); ?>" alt="" class="respimg" data-scrollax="properties: { translateY: '270px' }">
 							</div>
 						</div>
 					</div>
@@ -559,7 +559,7 @@
 								</div>
 							</div>
 							<div class="col-md-4">
-								<img src="{{ asset_url('client/images/all/6.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '100px' }">
+								<img src="<?php echo e(asset_url('client/images/all/6.jpg')); ?>" alt="" class="respimg" data-scrollax="properties: { translateY: '100px' }">
 							</div>
 							<div class="col-md-4">
 								<div class="custom-inner-content fl-wrap">
@@ -606,7 +606,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="video-box fl-wrap">
-							<img src="{{ asset_url('client/images/all/2.jpg') }}" alt="" class="respimg">
+							<img src="<?php echo e(asset_url('client/images/all/2.jpg')); ?>" alt="" class="respimg">
 							<a class="video-box-btn color-bg image-popup" href="https://vimeo.com/110234211">
 								<i class="fal fa-play" aria-hidden="true"></i>
 							</a>
@@ -868,8 +868,8 @@
 					<div class="slick-item">
 						<div class="fet_pr-carousel-box">
 							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/3.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/3.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
+								<img src="<?php echo e(asset_url('client/images/folio/web/slider/3.jpg')); ?>" alt="" class="respimg">
+								<a href="<?php echo e(asset_url('client/images/folio/web/slider/3.jpg')); ?>" class="fet_pr-carousel-box-media-zoom image-popup">
 									<i class="fal fa-search"></i>
 								</a>
 							</div>
@@ -896,7 +896,7 @@
 					<div class="slick-item">
 						<div class="fet_pr-carousel-box">
 							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/4.jpg') }}" alt="" class="respimg">
+								<img src="<?php echo e(asset_url('client/images/folio/web/slider/4.jpg')); ?>" alt="" class="respimg">
 								<a href="https://vimeo.com/183619886" class="fet_pr-carousel-box-media-zoom image-popup">
 									<i class="fal fa-play"></i>
 								</a>
@@ -924,8 +924,8 @@
 					<div class="slick-item">
 						<div class="fet_pr-carousel-box">
 							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/1.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/1.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
+								<img src="<?php echo e(asset_url('client/images/folio/web/slider/1.jpg')); ?>" alt="" class="respimg">
+								<a href="<?php echo e(asset_url('client/images/folio/web/slider/1.jpg')); ?>" class="fet_pr-carousel-box-media-zoom image-popup">
 									<i class="fal fa-search"></i>
 								</a>
 							</div>
@@ -952,8 +952,8 @@
 					<div class="slick-item">
 						<div class="fet_pr-carousel-box">
 							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/2.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/2.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
+								<img src="<?php echo e(asset_url('client/images/folio/web/slider/2.jpg')); ?>" alt="" class="respimg">
+								<a href="<?php echo e(asset_url('client/images/folio/web/slider/2.jpg')); ?>" class="fet_pr-carousel-box-media-zoom image-popup">
 									<i class="fal fa-search"></i>
 								</a>
 							</div>
@@ -980,8 +980,8 @@
 					<div class="slick-item">
 						<div class="fet_pr-carousel-box">
 							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/5.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/5.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
+								<img src="<?php echo e(asset_url('client/images/folio/web/slider/5.jpg')); ?>" alt="" class="respimg">
+								<a href="<?php echo e(asset_url('client/images/folio/web/slider/5.jpg')); ?>" class="fet_pr-carousel-box-media-zoom image-popup">
 									<i class="fal fa-search"></i>
 								</a>
 							</div>
@@ -1056,7 +1056,7 @@
 					<div class="slick-item">
 						<div class="text-carousel-item">
 							<div class="popup-avatar">
-								<img src="{{ asset_url('client/images/avatar/1.jpg') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/avatar/1.jpg')); ?>" alt="">
 							</div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
@@ -1072,7 +1072,7 @@
 					<div class="slick-item">
 						<div class="text-carousel-item">
 							<div class="popup-avatar">
-								<img src="{{ asset_url('client/images/avatar/2.jpg') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/avatar/2.jpg')); ?>" alt="">
 							</div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
@@ -1088,7 +1088,7 @@
 					<div class="slick-item">
 						<div class="text-carousel-item">
 							<div class="popup-avatar">
-								<img src="{{ asset_url('client/images/avatar/3.jpg') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/avatar/3.jpg')); ?>" alt="">
 							</div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
@@ -1104,7 +1104,7 @@
 					<div class="slick-item">
 						<div class="text-carousel-item">
 							<div class="popup-avatar">
-								<img src="{{ asset_url('client/images/avatar/4.jpg') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/avatar/4.jpg')); ?>" alt="">
 							</div>
 							<div class="review-owner fl-wrap">
 								Milka Antony - <span>Happy Client</span>
@@ -1125,27 +1125,27 @@
 					<ul class="client-list client-list-white">
 						<li>
 							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/1.png') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/clients/1.png')); ?>" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/2.png') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/clients/2.png')); ?>" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/3.png') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/clients/3.png')); ?>" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/4.png') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/clients/4.png')); ?>" alt="">
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/5.png') }}" alt="">
+								<img src="<?php echo e(asset_url('client/images/clients/5.png')); ?>" alt="">
 							</a>
 						</li>
 					</ul>
@@ -1177,7 +1177,9 @@
 	</div>
 	<!-- Content end -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
-@endsection
+<?php $__env->startSection('scripts'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('client.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/client/pages/home.blade.php ENDPATH**/ ?>

@@ -7,72 +7,86 @@ use PDO;
 
 class Products extends Controller
 {
-	public function index()
+	public function list()
 	{
-		// Products, images and videos
+		// Categories
+		$sql = "SELECT name, slug
+		FROM product_categories
+		WHERE deleted_at IS NULL";
+
+        $categories = $this->db->query($sql, PDO::FETCH_OBJ);
+
+		// Products
 		$sql = "SELECT p.name AS name, p.slug AS slug,
-		pi.image AS image,
-		pv.video AS video
+		pimg.url AS image_url,
+		pc.name AS category_name, pc.slug AS category_slug
 		FROM products p
-		INNER JOIN product_images pi ON pi.product_id = p.id
-		LEFT JOIN product_videos pv ON pv.product_id = p.id
-		WHERE p.deleted_at IS NULL AND (p.default_image = pi.id OR p.default_video = pv.id)
-		ORDER BY p.priority ASC";
+		INNER JOIN product_images pimg ON pimg.product_id = p.id
+		INNER JOIN product_categories pc ON pc.id = p.category_id
+		WHERE (p.deleted_at IS NULL && pimg.deleted_at IS NULL && pc.deleted_at IS NULL)
+		&& p.default_image = pimg.id";
 
-		$query = $this->db->query($sql, PDO::FETCH_OBJ);
+        $products = $this->db->query($sql, PDO::FETCH_OBJ);
 
-		$data = [
-			'products' => $query
-		];
+        $data = [
+			'categories' => $categories,
+            'products' => $products
+        ];
 
-		return $this->view('client.pages.products', $data);
+		return $this->view('client.pages.products.list', $data);
 	}
 
 	public function detail($slug)
 	{
 		// Products
-		$sql = "SELECT id, name, description, info
-		FROM products
-		WHERE deleted_at IS NULL AND slug = '{$slug}'";
+		$sql = "SELECT p.id AS id, p.name AS name, p.description AS description, p.content AS content, p.video AS video,
+		pc.name AS category_name
+		FROM products p
+		INNER JOIN product_categories pc ON pc.id = p.category_id
+		WHERE p.deleted_at IS NULL AND pc.deleted_at IS NULL
+		AND p.slug = '{$slug}'";
 
 		$product = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
 
 		if (!$product)
 		{
-			header('Location: ' . site_url('products'));
+			header('Location: ' . site_url('urunlerimiz'));
 			exit;
 		}
 
 		$id = $product->id;
 
 		// Images
-		$sql = "SELECT image
+		$sql = "SELECT url
 		FROM product_images
-		WHERE deleted_at IS NULL AND product_id = '{$id}'";
+		WHERE deleted_at IS NULL
+		AND product_id = '{$id}'";
 
 		$images = $this->db->query($sql, PDO::FETCH_OBJ);
 
-		// Videos
-		$sql = "SELECT video
-		FROM product_videos
-		WHERE deleted_at IS NULL AND product_id = '{$id}'";
+		// Prev Product
+		$sql = "SELECT name, slug
+		FROM products
+		WHERE deleted_at IS NULL
+		AND id < '{$id}'";
 
-		$videos = $this->db->query($sql, PDO::FETCH_OBJ);
+		$prevProduct = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
 
-		// Accordions
-		$sql = "SELECT title, content
-		FROM product_accordions
-		WHERE deleted_at IS NULL AND product_id = '{$id}'";
+		// Next Product
+		$sql = "SELECT name, slug
+		FROM products
+		WHERE deleted_at IS NULL
+		AND id > '{$id}'";
 
-		$accordions = $this->db->query($sql, PDO::FETCH_OBJ);
+		$nextProduct = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
 
 		$data = [
 			'product' => $product,
 			'images' => $images,
-			'videos' => $videos,
-			'accordions' => $accordions
+			'prevProduct' => $prevProduct,
+			'nextProduct' => $nextProduct
 		];
 
-		return $this->view('client.pages.products-detail', $data);
+		return $this->view('client.pages.products.detail', $data);
 	}
 }

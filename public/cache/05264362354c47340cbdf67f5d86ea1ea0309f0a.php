@@ -1,9 +1,9 @@
-@extends('admin.layouts.auth')
 
-@section('styles')
-@endsection
 
-@section('content')
+<?php $__env->startSection('styles'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
 
 	<!-- Row start -->
 	<div class="row g-0 h-100">
@@ -23,8 +23,8 @@
 				<form action="" method="post">
 					<div class="login-screen">
 						<div class="login-body">
-							<a href="{{ site_url('admin/login') }}" class="login-logo">
-								<img src="{{ asset_url('admin/img/logo-black.svg') }}" alt="Plasmak" style="width: 300px">
+							<a href="<?php echo e(site_url('admin/login')); ?>" class="login-logo">
+								<img src="<?php echo e(asset_url('admin/img/logo-black.svg')); ?>" alt="Plasmak" style="width: 300px">
 							</a>
 							<h6>
 								Hoşgeldiniz,
@@ -32,7 +32,7 @@
 								Lütfen sisteme giriş yapın.
 							</h6>
 							<div class="field-wrapper">
-								<input type="text" name="username" value="{{ $username ?? null }}" autofocus>
+								<input type="text" name="username" value="<?php echo e($username ?? null); ?>" autofocus>
 								<div class="field-placeholder">
 									Kullanıcı Adı
 								</div>
@@ -52,11 +52,12 @@
 								</button>
 							</div>
 
-							@isset ($error)
-								<div class="alert alert-{{ $error['class'] }}" role="alert">
-									{{ $error['text'] }}
+							<?php if(isset($error)): ?>
+								<div class="alert alert-<?php echo e($error['class']); ?>" role="alert">
+									<?php echo e($error['text']); ?>
+
 								</div>
-							@endisset
+							<?php endif; ?>
 
 						</div>
 						<!--<div class="login-footer">
@@ -74,7 +75,9 @@
 	</div>
 	<!-- Row end -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
-@endsection
+<?php $__env->startSection('scripts'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admin.layouts.auth', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/admin/pages/auth/login.blade.php ENDPATH**/ ?>

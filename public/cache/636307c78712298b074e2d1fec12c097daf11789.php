@@ -5,22 +5,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Plasmak - @yield('title')</title>
-	<meta name="description" content="@yield('description')">
+	<title>Plasmak - <?php echo $__env->yieldContent('title'); ?></title>
+	<meta name="description" content="<?php echo $__env->yieldContent('description'); ?>">
 
 	<meta name="robots" content="noindex, nofollow">
 
 	<!--=============== favicons ===============-->
-	<link rel="shortcut icon" href="{{ asset_url('client/images/favicon.ico') }}">
+	<link rel="shortcut icon" href="<?php echo e(asset_url('client/images/favicon.ico')); ?>">
 
 	<!--=============== css  ===============-->
-	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/reset.css') }}">
-	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/plugins.css') }}">
-	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/style.css') }}">
-	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/color.css') }}">
-	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/custom.css') }}">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset_url('client/css/reset.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset_url('client/css/plugins.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset_url('client/css/style.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset_url('client/css/color.css')); ?>">
+	<link type="text/css" rel="stylesheet" href="<?php echo e(asset_url('client/css/custom.css')); ?>">
 
-	@yield('styles')
+	<?php echo $__env->yieldContent('styles'); ?>
 </head>
 <body>
 
@@ -35,8 +35,8 @@
 
 		<!-- header -->
 		<header class="main-header">
-			<a href="{{ site_url() }}" class="logo-holder">
-				<img src="{{ asset_url('client/images/logo.svg') }}" alt="Plasmak">
+			<a href="<?php echo e(site_url()); ?>" class="logo-holder">
+				<img src="<?php echo e(asset_url('client/images/logo.svg')); ?>" alt="Plasmak">
 			</a>
 
 			<!-- nav-button-wrap -->
@@ -92,8 +92,8 @@
 			</div>
 		</div>
 		<div class="nav-holder">
-			<a href="{{ site_url() }}" class="header-logo">
-				<img src="{{ asset_url('client/images/logo2.svg') }}" alt="Plasmak">
+			<a href="<?php echo e(site_url()); ?>" class="header-logo">
+				<img src="<?php echo e(asset_url('client/images/logo2.svg')); ?>" alt="Plasmak">
 			</a>
 			<div class="nav-title">
 				<span>Menü</span>
@@ -102,93 +102,93 @@
 				<nav class="nav-inner sound-nav" id="menu">
 					<ul>
 						<li>
-							<a href="#" class="{{ segments(0) == 'plasmak-dunyasi' ? 'act-link' : null }}">
+							<a href="#" class="<?php echo e(segments(0) == 'plasmak-dunyasi' ? 'act-link' : null); ?>">
 								Plasmak Dünyası
 							</a>
 							<ul>
 								<li>
-									<a href="{{ site_url('plasmak-dunyasi/kisaca-plasmak') }}" class="{{ segments(0) == 'plasmak-dunyasi' && segments(1) == 'kisaca-plasmak' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('plasmak-dunyasi/kisaca-plasmak')); ?>" class="<?php echo e(segments(0) == 'plasmak-dunyasi' && segments(1) == 'kisaca-plasmak' ? 'act-link' : null); ?>">
 										Kısaca Plasmak
 									</a>
 								</li>
 								<!--<li>
-									<a href="{{ site_url('plasmak-dunyasi/yonetim-kurulu') }}" class="{{ segments(0) == 'plasmak-dunyasi' && segments(1) == 'yonetim-kurulu' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('plasmak-dunyasi/yonetim-kurulu')); ?>" class="<?php echo e(segments(0) == 'plasmak-dunyasi' && segments(1) == 'yonetim-kurulu' ? 'act-link' : null); ?>">
 										Yönetim Kurulu
 									</a>
 								</li>-->
 								<li>
-									<a href="{{ site_url('plasmak-dunyasi/plasmak-perfect') }}" class="{{ segments(0) == 'plasmak-dunyasi' && segments(1) == 'plasmak-perfect' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('plasmak-dunyasi/plasmak-perfect')); ?>" class="<?php echo e(segments(0) == 'plasmak-dunyasi' && segments(1) == 'plasmak-perfect' ? 'act-link' : null); ?>">
 										#PlasmakPerfect
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#" class="{{ segments(0) == 'yetkinliklerimiz' ? 'act-link' : null }}">
+							<a href="#" class="<?php echo e(segments(0) == 'yetkinliklerimiz' ? 'act-link' : null); ?>">
 								Yetkinliklerimiz
 							</a>
 							<ul>
 								<li>
-									<a href="{{ site_url('yetkinliklerimiz/uretim') }}" class="{{ segments(0) == 'yetkinliklerimiz' && segments(1) == 'uretim' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('yetkinliklerimiz/uretim')); ?>" class="<?php echo e(segments(0) == 'yetkinliklerimiz' && segments(1) == 'uretim' ? 'act-link' : null); ?>">
 										Üretim
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('yetkinliklerimiz/ar-ge') }}" class="{{ segments(0) == 'yetkinliklerimiz' && segments(1) == 'ar-ge' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('yetkinliklerimiz/ar-ge')); ?>" class="<?php echo e(segments(0) == 'yetkinliklerimiz' && segments(1) == 'ar-ge' ? 'act-link' : null); ?>">
 										Ar-Ge (R&D)
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('yetkinliklerimiz/teknoloji') }}" class="{{ segments(0) == 'yetkinliklerimiz' && segments(1) == 'teknoloji' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('yetkinliklerimiz/teknoloji')); ?>" class="<?php echo e(segments(0) == 'yetkinliklerimiz' && segments(1) == 'teknoloji' ? 'act-link' : null); ?>">
 										Teknoloji
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('yetkinliklerimiz/dagitim') }}" class="{{ segments(0) == 'yetkinliklerimiz' && segments(1) == 'dagitim' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('yetkinliklerimiz/dagitim')); ?>" class="<?php echo e(segments(0) == 'yetkinliklerimiz' && segments(1) == 'dagitim' ? 'act-link' : null); ?>">
 										Dağıtım
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="{{ site_url('urunlerimiz') }}" class="{{ segments(0) == 'urunlerimiz' ? 'act-link' : null }}">
+							<a href="<?php echo e(site_url('urunlerimiz')); ?>" class="<?php echo e(segments(0) == 'urunlerimiz' ? 'act-link' : null); ?>">
 								Ürünlerimiz
 							</a>
 						</li>
 						<li>
-							<a href="#" class="{{ segments(0) == 'kurumsal' ? 'act-link' : null }}">
+							<a href="#" class="<?php echo e(segments(0) == 'kurumsal' ? 'act-link' : null); ?>">
 								Kurumsal
 							</a>
 							<ul>
 								<li>
-									<a href="{{ site_url('kurumsal/guncel-haberler') }}" class="{{ segments(0) == 'kurumsal' && segments(1) == 'guncel-haberler' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('kurumsal/guncel-haberler')); ?>" class="<?php echo e(segments(0) == 'kurumsal' && segments(1) == 'guncel-haberler' ? 'act-link' : null); ?>">
 										Güncel Haberler
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('kurumsal/kariyer') }}" class="{{ segments(0) == 'kurumsal' && segments(1) == 'kariyer' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('kurumsal/kariyer')); ?>" class="<?php echo e(segments(0) == 'kurumsal' && segments(1) == 'kariyer' ? 'act-link' : null); ?>">
 										Kariyer
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('plasmakconnect') }}">
+									<a href="<?php echo e(site_url('plasmakconnect')); ?>">
 										#PlasmakConnect
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('kurumsal/politikalarimiz') }}" class="{{ segments(0) == 'kurumsal' && segments(1) == 'politikalarimiz' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('kurumsal/politikalarimiz')); ?>" class="<?php echo e(segments(0) == 'kurumsal' && segments(1) == 'politikalarimiz' ? 'act-link' : null); ?>">
 										Politikalarımız
 									</a>
 								</li>
 								<li>
-									<a href="{{ site_url('kurumsal/kisisel-verilerin-korunmasi') }}" class="{{ segments(0) == 'kurumsal' && segments(1) == 'kisisel-verilerin-korunmasi' ? 'act-link' : null }}">
+									<a href="<?php echo e(site_url('kurumsal/kisisel-verilerin-korunmasi')); ?>" class="<?php echo e(segments(0) == 'kurumsal' && segments(1) == 'kisisel-verilerin-korunmasi' ? 'act-link' : null); ?>">
 										Kişisel Verilerin Korunması
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="{{ site_url('bize-ulasin') }}" class="{{ segments(0) == 'bize-ulasin' ? 'act-link' : null }}">
+							<a href="<?php echo e(site_url('bize-ulasin')); ?>" class="<?php echo e(segments(0) == 'bize-ulasin' ? 'act-link' : null); ?>">
 								Bize Ulaşın
 							</a>
 						</li>
@@ -199,9 +199,9 @@
 		<!--  navigation bar end -->
 
 		<!-- wrapper -->
-		<div id="wrapper" class="{{ segments(0) ? 'single-page-wrap' : null }}">
+		<div id="wrapper" class="<?php echo e(segments(0) ? 'single-page-wrap' : null); ?>">
 
-			@yield('content')
+			<?php echo $__env->yieldContent('content'); ?>
 
 			<!-- footer -->
 			<div class="height-emulator fl-wrap"></div>
@@ -224,7 +224,7 @@
 								</div>
 								<div class="footer-box fl-wrap">
 									<div class="twitter-swiper-container fl-wrap" id="twitts-container"></div>
-									<a href="{{ site_url('') }}" class="btn float-btn trsp-btn">
+									<a href="<?php echo e(site_url('')); ?>" class="btn float-btn trsp-btn">
 										Daha Fazlası
 									</a>
 								</div>
@@ -324,7 +324,7 @@
 						<!-- policy-box -->
 						<div class="policy-box">
 							<span>
-								&copy; Plasmak {{ date('Y') }} / Tüm hakları saklıdır. Created by
+								&copy; Plasmak <?php echo e(date('Y')); ?> / Tüm hakları saklıdır. Created by
 								<a href="https://www.fiveajans.com" target="_blank" style="color: #fff; font-weight: bold">
 									FIVE
 								</a>
@@ -345,7 +345,7 @@
 			<!-- footer end -->
 
 			<!-- contact-btn -->
-			<a href="{{ site_url('plasmakconnect') }}" class="contact-btn color-bg">
+			<a href="<?php echo e(site_url('plasmakconnect')); ?>" class="contact-btn color-bg">
 				<i class="fal fa-external-link"></i>
 				<span>PlasmakConnect</span>
 			</a>
@@ -383,10 +383,11 @@
 	<!-- Main end -->
 
 	<!--=============== scripts  ===============-->
-	<script type="text/javascript" src="{{ asset_url('client/js/jquery.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset_url('client/js/plugins.js') }}"></script>
-	<script type="text/javascript" src="{{ asset_url('client/js/scripts.js') }}"></script>
+	<script type="text/javascript" src="<?php echo e(asset_url('client/js/jquery.min.js')); ?>"></script>
+	<script type="text/javascript" src="<?php echo e(asset_url('client/js/plugins.js')); ?>"></script>
+	<script type="text/javascript" src="<?php echo e(asset_url('client/js/scripts.js')); ?>"></script>
 
-	@yield('scripts')
+	<?php echo $__env->yieldContent('scripts'); ?>
 </body>
 </html>
+<?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/client/layouts/main.blade.php ENDPATH**/ ?>

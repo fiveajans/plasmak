@@ -6,19 +6,20 @@ use Core\Controller;
 use PDO;
 use Symfony\Component\HttpFoundation\Request;
 use Verot\Upload\Upload;
+use Ausi\SlugGenerator\SlugGenerator;
 
 class Products extends Controller
 {
 	public function approved()
 	{
         $sql = "SELECT p.id AS id, p.name AS name, p.description AS description, p.updated_at AS updated_at,
-        pi.image AS image
+        pimg.url AS image_url
         FROM products p
-        LEFT JOIN product_images pi ON pi.product_id = p.id
+        LEFT JOIN product_images pimg ON pimg.product_id = p.id
 		WHERE p.deleted_at IS NULL AND
 		CASE
-			WHEN p.default_image IS NOT NULL THEN p.default_image = pi.id
-			ELSE pi.id
+			WHEN p.default_image IS NOT NULL THEN p.default_image = pimg.id
+			ELSE pimg.id
 		END
         ORDER BY p.id DESC";
 
@@ -34,13 +35,13 @@ class Products extends Controller
 	public function unapproved()
 	{
 		$sql = "SELECT p.id AS id, p.name AS name, p.description AS description, p.deleted_at AS deleted_at, p.updated_at AS updated_at,
-        pi.image AS image
+        pimg.url AS image_url
         FROM products p
-        LEFT JOIN product_images pi ON pi.product_id = p.id
+        LEFT JOIN product_images pimg ON pimg.product_id = p.id
 		WHERE p.deleted_at IS NOT NULL AND
 		CASE
-			WHEN p.default_image IS NOT NULL THEN p.default_image = pi.id
-			ELSE pi.id
+			WHEN p.default_image IS NOT NULL THEN p.default_image = pimg.id
+			ELSE pimg.id
 		END
         ORDER BY p.id DESC";
 
@@ -55,6 +56,8 @@ class Products extends Controller
 
 	public function create(Request $request)
     {
+		$generator = new SlugGenerator;
+
 		$data = [];
 		$message = [];
 
@@ -63,7 +66,7 @@ class Products extends Controller
 			$this->validator->rule('required', [
 				'name',
 				'description',
-				'info'
+				'content'
 			]);
 
 			$data = $this->validator->data();
@@ -94,26 +97,26 @@ class Products extends Controller
 
 					if ($handle->uploaded)
 					{
-						$name = permalink($data['name']) . '_' . hashid();
-						$images[] = $name . '.webp';
+						$name = $generator->generate($data['name']) . '_' . hashid();
+						$images[] = $name . '.jpg';
 
 						$handle->allowed = ['image/*'];
 						$handle->file_new_name_body = $name;
-						$handle->image_convert = 'webp';
+						$handle->image_convert = 'jpg';
 						$handle->process('./uploads/images/original/products');
 
 						$handle->allowed = ['image/*'];
 						$handle->file_new_name_body = $name;
-						$handle->image_convert = 'webp';
+						$handle->image_convert = 'jpg';
 						$handle->image_resize = true;
 						$handle->image_x = 400;
 						$handle->image_y = 400;
 						$handle->image_ratio_crop = true;
-						$handle->process('./uploads/images/cache/products/400x400');
+						$handle->process('./uploads/images/cache/products/800x530');
 
 						$handle->allowed = ['image/*'];
 						$handle->file_new_name_body = $name;
-						$handle->image_convert = 'webp';
+						$handle->image_convert = 'jpg';
 						$handle->image_resize = true;
 						$handle->image_x = 40;
 						$handle->image_y = 40;
@@ -143,17 +146,19 @@ class Products extends Controller
 				else
 				{
 					$name = $data['name'];
-					$slug = permalink($name);
+					$slug = $generator->generate($name);
 					$description = $data['description'];
-					$info = $data['info'];
-					$priority = $data['priority'];
+					$content = $data['content'];
+					$video = $data['video'];
+					$category_id = $data['category_id'];
 
 					$sql = "INSERT INTO products SET
 					name = ?,
 					slug = ?,
 					description = ?,
-					info = ?,
-					priority = ?";
+					content = ?,
+					video = ?,
+					category_id = ?";
 
 					$query = $this->db->prepare($sql);
 
@@ -161,8 +166,9 @@ class Products extends Controller
 						$name,
 						$slug,
 						$description,
-						$info,
-						$priority
+						$content,
+						$video,
+						$category_id
 					]);
 
 					if ($insert)
@@ -247,9 +253,17 @@ class Products extends Controller
 			}
 		}
 
+		// Categories
+		$sql = "SELECT id, name
+		FROM product_categories
+		WHERE deleted_at IS NULL";
+
+		$categories = $this->db->query($sql, PDO::FETCH_OBJ);
+
 		$data = [
 			'old' => $data,
-			'message' => $message
+			'message' => $message,
+			'categories' => $categories
 		];
 
 		return $this->view('admin.pages.products.create', $data);
@@ -257,6 +271,8 @@ class Products extends Controller
 
     public function update($id, Request $request)
     {
+		$generator = new SlugGenerator;
+
 		$message = [];		
 
 		if ($request->getMethod() == 'POST')
@@ -264,7 +280,7 @@ class Products extends Controller
 			$this->validator->rule('required', [
 				'name',
 				'description',
-				'info'
+				'content'
 			]);
 
 			$data = $this->validator->data();
@@ -298,17 +314,17 @@ class Products extends Controller
 
 						if ($handle->uploaded)
 						{
-							$name = permalink($data['name']) . '_' . hashid();
-							$images[] = $name . '.webp';
+							$name = $generator->generate($data['name']) . '_' . hashid();
+							$images[] = $name . '.jpg';
 
 							$handle->allowed = ['image/*'];
 							$handle->file_new_name_body = $name;
-							$handle->image_convert = 'webp';
+							$handle->image_convert = 'jpg';
 							$handle->process('./uploads/images/original/products');
 
 							$handle->allowed = ['image/*'];
 							$handle->file_new_name_body = $name;
-							$handle->image_convert = 'webp';
+							$handle->image_convert = 'jpg';
 							$handle->image_resize = true;
 							$handle->image_x = 400;
 							$handle->image_y = 400;
@@ -317,7 +333,7 @@ class Products extends Controller
 
 							$handle->allowed = ['image/*'];
 							$handle->file_new_name_body = $name;
-							$handle->image_convert = 'webp';
+							$handle->image_convert = 'jpg';
 							$handle->image_resize = true;
 							$handle->image_x = 40;
 							$handle->image_y = 40;
@@ -348,17 +364,19 @@ class Products extends Controller
 				else
 				{
 					$name = $data['name'];
-					$slug = permalink($name);
+					$slug = $generator->generate($name);
 					$description = $data['description'];
-					$info = $data['info'];
-					$priority = $data['priority'];
+					$content = $data['content'];
+					$video = $data['video'];
+					$category_id = $data['category_id'];
 
 					$sql = "UPDATE products SET
 					name = :name,
 					slug = :slug,
 					description = :description,
-					info = :info,
-					priority = :priority
+					content = :content,
+					video = :video,
+					category_id = :category_id,
 					WHERE id = :id";
 
 					$query = $this->db->prepare($sql);
@@ -367,8 +385,9 @@ class Products extends Controller
 						'name' => $name,
 						'slug' => $slug,
 						'description' => $description,
-						'info' => $info,
-						'priority' => $priority,
+						'content' => $content,
+						'video' => $video,
+						'category_id' => $category_id,
 						'id' => $id
 					]);
 
@@ -436,9 +455,11 @@ class Products extends Controller
 		}
 
 		// Product
-		$sql = "SELECT id, name, slug, description, info, priority, default_image, default_video
-		FROM products
-		WHERE id = '{$id}'";
+		$sql = "SELECT p.id AS id, p.name AS name, p.slug AS slug, p.description AS description, p.content AS content, p.video AS video, p.default_image AS default_image,
+		pc.id AS category_id
+		FROM products p
+		INNER JOIN product_categories pc ON pc.id = p.category_id
+		WHERE p.id = '{$id}'";
 
 		$product = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
 
@@ -449,7 +470,7 @@ class Products extends Controller
 		}
 
 		// Images
-		$sql = "SELECT id, image
+		$sql = "SELECT id, url
 		FROM product_images
 		WHERE deleted_at IS NULL AND product_id = '{$id}'";
 
@@ -459,6 +480,20 @@ class Products extends Controller
 			'message' => $message,
 			'product' => $product,
 			'images' => $images
+		];
+
+		// Categories
+		$sql = "SELECT id, name
+		FROM product_categories
+		WHERE deleted_at IS NULL";
+
+		$categories = $this->db->query($sql, PDO::FETCH_OBJ);
+
+		$data = [
+			'message' => $message,
+			'product' => $product,
+			'images' => $images,
+			'categories' => $categories
 		];
 
 		return $this->view('admin.pages.products.update', $data);

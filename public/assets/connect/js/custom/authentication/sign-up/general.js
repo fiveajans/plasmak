@@ -33,20 +33,20 @@ var KTSignupGeneral = function() {
                         validators: {
                             regexp: {
                                 regexp: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: 'The value is not a valid email address',
+                                message: 'Lütfen geçerli bir e-posta adresi girin.',
                             },
 							notEmpty: {
-								message: 'Email address is required'
+								message: 'E-posta alanı zorunludur.'
 							}
 						}
 					},
                     'password': {
                         validators: {
                             notEmpty: {
-                                message: 'The password is required'
+                                message: 'Şifre alanı zorunludur.'
                             },
                             callback: {
-                                message: 'Please enter valid password',
+                                message: 'Lütfen geçerli bir şifre girin.',
                                 callback: function(input) {
                                     if (input.value.length > 0) {
                                         return validatePassword();
@@ -58,20 +58,20 @@ var KTSignupGeneral = function() {
                     'confirm-password': {
                         validators: {
                             notEmpty: {
-                                message: 'The password confirmation is required'
+                                message: 'Şifre tekrarı alanı zorunludur.'
                             },
                             identical: {
                                 compare: function() {
                                     return form.querySelector('[name="password"]').value;
                                 },
-                                message: 'The password and its confirm are not the same'
+                                message: 'Şifre ve şifre tekrarı aynı değil.'
                             }
                         }
                     },
                     'toc': {
                         validators: {
                             notEmpty: {
-                                message: 'You must accept the terms and conditions'
+                                message: 'Şartlar ve koşulları kabul etmelisiniz.'
                             }
                         }
                     }
@@ -115,14 +115,16 @@ var KTSignupGeneral = function() {
 
                         // Show message popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                         Swal.fire({
-                            text: "You have successfully reset your password!",
-                            icon: "success",
+                            text: "Bir hata oluştu!",
+                            icon: "error",
                             buttonsStyling: false,
-                            confirmButtonText: "Ok, got it!",
+                            confirmButtonText: "Tamam, anladım!",
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
-                        }).then(function (result) {
+                        });
+						
+						/*.then(function (result) {
                             if (result.isConfirmed) { 
                                 form.reset();  // reset form                    
                                 passwordMeter.reset();  // reset password meter
@@ -134,15 +136,15 @@ var KTSignupGeneral = function() {
                                     location.href = redirectUrl;
                                 }
                             }
-                        });
+                        });*/
                     }, 1500);   						
                 } else {
                     // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                     Swal.fire({
-                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        text: "Bir hata oluştu, lütfen tekrar deneyin.",
                         icon: "error",
                         buttonsStyling: false,
-                        confirmButtonText: "Ok, got it!",
+                        confirmButtonText: "Tamam, anladım!",
                         customClass: {
                             confirmButton: "btn btn-primary"
                         }

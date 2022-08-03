@@ -46,7 +46,7 @@
 										<tr>
 											<td>
 												<div class="media-box">
-													<img src="{{ upload_url('images/cache/products/40x40/' . $product->image) }}" class="media-avatar" alt="{{ $product->name }}">
+													<img src="{{ upload_url('images/cache/products/40x40/' . $product->image_url) }}" class="media-avatar" alt="{{ $product->name }}">
 													<div class="media-box-body">
 														<a href="{{ site_url('admin/products/update/' . $product->id) }}" class="text-truncate">
 															{{ $product->name }}
