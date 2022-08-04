@@ -65,17 +65,16 @@
 				<!-- half-slider-img -->
 				<div class="half-slider-img fl-wrap full-height">
 
-					<!-- half-slider-img item -->
-					<!--<div class="half-slider-img-item">
-						<div class="media-container">
-							<div class="bg mob-bg" style="background-image: url({{ asset_url('client/images/bg/29.jpg') }})"></div>
-							<div class="video-container" style="width: 1905px; height: 1071.56px;">
-								<div class="background-youtube-wrapper" data-vid="MQeKyOT97BE" data-mv="1"></div>
-							</div>
+					<div class="half-slider-img-item">
+						<div class="bg" data-bg="{{ asset_url('client/images/1.jpg') }}" data-scrollax="properties: { translateY: '250px' }">
+							<div class="video-container">
+                                <video autoplay loop muted class="bgvid">
+                                    <source src="{{ asset_url('client/video/2.mp4') }}" type="video/mp4">
+                                </video>
+                            </div>
 						</div>
 						<div class="overlay"></div>
-					</div>-->
-					<!-- half-slider-img item end -->
+					</div>
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
@@ -109,6 +108,25 @@
 
 				<!-- slider-nav -->
 				<div class="slider-nav cur_carousel-slider-container" data-slick='{"autoplay": true, "autoplaySpeed": 4000 , "pauseOnHover": false}'>
+
+					<!-- half-slider-item -->
+					<div class="half-slider-item fl-wrap">
+						<div class="half-hero-wrap">
+							<h1>
+								Video
+								<br>
+								<span>Başlığı.</span>
+							</h1>
+							<h4>
+								Daha Fazlası İçin
+							</h4>
+							<div class="clearfix"></div>
+							<a href="#" class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">
+								Şimdi Başla
+							</a>
+						</div>
+					</div>
+					<!-- half-slider-item end -->
 
 					<!-- half-slider-item -->
 					<div class="half-slider-item fl-wrap">
