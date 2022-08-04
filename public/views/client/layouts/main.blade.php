@@ -11,7 +11,7 @@
 	<meta name="robots" content="noindex, nofollow">
 
 	<!--=============== favicons ===============-->
-	<link rel="shortcut icon" href="{{ asset_url('client/images/favicon.ico') }}">
+	<link rel="shortcut icon" href="{{ asset_url('client/images/favicon.png') }}">
 
 	<!--=============== css  ===============-->
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/reset.css') }}">

@@ -13,7 +13,7 @@
 	<title>Yönetim Paneli</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="{{ asset_url('admin/img/fav.png') }}">
+	<link rel="shortcut icon" href="{{ asset_url('admin/img/favicon.png') }}">
 
 	<!-- *************
 		************ Common Css Files *************

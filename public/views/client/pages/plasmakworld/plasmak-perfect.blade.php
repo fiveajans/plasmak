@@ -219,7 +219,7 @@
 						<h3>Geleceğe yön vermeye hazır mısınız?</h3>
 					</div>
 					<div class="col-md-4">
-						<a href="contscts.html" class="btn flat-btn color-btn">
+						<a href="{{ site_url('bize-ulasin') }}" class="btn flat-btn color-btn">
 							Bize Ulaşın
 						</a>
 					</div>

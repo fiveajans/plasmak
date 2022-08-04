@@ -103,9 +103,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
-						<h3>Ready To order Your Project ?</h3>
+						<h3>
+							Geleceğe yön vermeye hazır mısınız?
+						</h3>
 					</div>
-					<div class="col-md-4"><a href="contscts.html" class="btn flat-btn color-btn">Get In Touch</a> </div>
+					<div class="col-md-4">
+						<a href="<?php echo e(site_url('bize-ulasin')); ?>" class="btn flat-btn color-btn">
+							Bize Ulaşın
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -1,12 +1,12 @@
-@extends('client.layouts.main')
 
-@section('title', '')
-@section('description', '')
 
-@section('styles')
-@endsection
+<?php $__env->startSection('title', ''); ?>
+<?php $__env->startSection('description', ''); ?>
 
-@section('content')
+<?php $__env->startSection('styles'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
 
 	<!-- Content-->
 	<div class="content">
@@ -102,7 +102,7 @@
 
 								<!-- blog media -->
 								<div class="blog-media fl-wrap mb-15">
-									<img src="{{ asset_url('client/images/folio/2.jpg') }}" alt="">
+									<img src="<?php echo e(asset_url('client/images/folio/2.jpg')); ?>" alt="">
 								</div>
 								<!-- blog media end -->
 
@@ -141,7 +141,7 @@
 											<ul>
 												<li class="clearfix">
 													<a href="#" class="widget-posts-img">
-														<img src="{{ asset_url('client/images/folio/1.jpg') }}" class="respimg" alt="">
+														<img src="<?php echo e(asset_url('client/images/folio/1.jpg')); ?>" class="respimg" alt="">
 													</a>
 													<div class="widget-posts-descr">
 														<a href="#" title="">
@@ -152,7 +152,7 @@
 												</li>
 												<li class="clearfix">
 													<a href="#" class="widget-posts-img">
-														<img src="{{ asset_url('client/images/folio/2.jpg') }}" class="respimg" alt="">
+														<img src="<?php echo e(asset_url('client/images/folio/2.jpg')); ?>" class="respimg" alt="">
 													</a>
 													<div class="widget-posts-descr">
 														<a href="#" title="">
@@ -178,7 +178,7 @@
 					<div class="content-nav">
 						<ul>
 							<li>
-								<a href="{{ site_url('kurumsal/guncel-haberler/haber/haber-adi') }}" class="ln">
+								<a href="blog.html" class="ln">
 									<i class="fal fa-arrow-left"></i>
 									<span class="tooltip">Önceki - Haber Adı</span>
 								</a>
@@ -189,7 +189,7 @@
 								</span>
 							</li>
 							<li>
-								<a href="{{ site_url('kurumsal/guncel-haberler/haber/haber-adi') }}" class="rn">
+								<a href="blog.html" class="rn">
 									<i class="fal fa-arrow-right"></i>
 									<span class="tooltip">Sonraki - Haber Adı</span>
 								</a>
@@ -220,7 +220,7 @@
 						</h3>
 					</div>
 					<div class="col-md-4">
-						<a href="{{ site_url('bize-ulasin') }}" class="btn flat-btn color-btn">
+						<a href="<?php echo e(site_url('bize-ulasin')); ?>" class="btn flat-btn color-btn">
 							Bize Ulaşın
 						</a>
 					</div>
@@ -232,7 +232,9 @@
 	</div>
 	<!-- Content end -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
-@endsection
+<?php $__env->startSection('scripts'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('client.layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\projects\plasmak\public\views/client/pages/corporate/recent-news/detail.blade.php ENDPATH**/ ?>

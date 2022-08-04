@@ -136,7 +136,7 @@
 						</h3>
 					</div>
 					<div class="col-md-4">
-						<a href="contscts.html" class="btn flat-btn color-btn">
+						<a href="<?php echo e(site_url('bize-ulasin')); ?>" class="btn flat-btn color-btn">
 							Bize Ulaşın
 						</a>
 					</div>

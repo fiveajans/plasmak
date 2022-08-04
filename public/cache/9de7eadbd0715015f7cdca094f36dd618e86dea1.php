@@ -74,7 +74,7 @@
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="<?php echo e(asset_url('client/images/1.jpg')); ?>" data-scrollax="properties: { translateY: '250px' }"></div>
+						<div class="bg" data-bg="<?php echo e(asset_url('client/images/4.jpg')); ?>" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
 					<!-- half-slider-img item end -->
@@ -1165,7 +1165,7 @@
 						</h3>
 					</div>
 					<div class="col-md-4">
-						<a href="contacts.html" class="btn flat-btn color-btn">
+						<a href="<?php echo e(site_url('bize-ulasin')); ?>" class="btn flat-btn color-btn">
 							Bize Ulaşın
 						</a>
 					</div>

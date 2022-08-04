@@ -40,6 +40,7 @@ $app->router->group('/kurumsal', function ($router) {
 
 	$router->group('/guncel-haberler', function ($router) {
 		$router->get('/', 'Client.Corporate@recentNews');
+		$router->get('/haber/:slug', 'Client.Corporate@recentNewsDetail');
 	});
 
 });
