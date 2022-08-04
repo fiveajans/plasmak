@@ -60,7 +60,7 @@
 		<div class="hero-inner fl-wrap full-height">
 
 			<!-- half-slider-img-wrap -->
-			<div class="half-slider-img-wrap">
+			<div class="half-hero-wrap">
 
 				<!-- half-slider-img -->
 				<div class="half-slider-img fl-wrap full-height">
