@@ -35,7 +35,7 @@ class Bootstrap
 		$this->db->query('SET CHARACTER SET utf8');
 
 		$this->router = new Router([
-			'base_folder' => 'projects/plasmak',
+			//'base_folder' => 'projects/plasmak',
 			'paths' => [
 				'controllers' => 'app/Controllers',
 				'middlewares' => 'app/Middlewares'

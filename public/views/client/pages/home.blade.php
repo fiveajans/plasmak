@@ -67,6 +67,18 @@
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
+						<div class="media-container">
+							<div class="bg mob-bg" style="background-image: url({{ asset_url('client/images/bg/29.jpg') }})"></div>
+							<div class="video-container" style="width: 1905px; height: 1071.56px;">
+								<div  class="background-youtube-wrapper" data-vid="MQeKyOT97BE" data-mv="1"></div>
+							</div>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<!-- half-slider-img item end -->
+
+					<!-- half-slider-img item -->
+					<div class="half-slider-img-item">
 						<div class="bg" data-bg="{{ asset_url('client/images/3.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
