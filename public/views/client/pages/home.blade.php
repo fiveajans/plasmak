@@ -60,21 +60,21 @@
 		<div class="hero-inner fl-wrap full-height">
 
 			<!-- half-slider-img-wrap -->
-			<div class="half-hero-wrap">
+			<div class="half-slider-img-wrap">
 
 				<!-- half-slider-img -->
 				<div class="half-slider-img fl-wrap full-height">
 
 					<!-- half-slider-img item -->
-					<div class="half-slider-img-item">
+					<!--<div class="half-slider-img-item">
 						<div class="media-container">
 							<div class="bg mob-bg" style="background-image: url({{ asset_url('client/images/bg/29.jpg') }})"></div>
 							<div class="video-container" style="width: 1905px; height: 1071.56px;">
-								<div  class="background-youtube-wrapper" data-vid="MQeKyOT97BE" data-mv="1"></div>
+								<div class="background-youtube-wrapper" data-vid="MQeKyOT97BE" data-mv="1"></div>
 							</div>
 						</div>
 						<div class="overlay"></div>
-					</div>
+					</div>-->
 					<!-- half-slider-img item end -->
 
 					<!-- half-slider-img item -->
