@@ -4,6 +4,21 @@
 @section('description', 'Açıklama.')
 
 @section('styles')
+
+	<style>
+		.one::after {
+			content: '\f005';
+		}
+
+		.two::after {
+			content: '\f0ac';
+		}
+
+		.three::after {
+			content: '\f0eb';
+		}
+	</style>
+
 @endsection
 
 @section('content')
@@ -423,7 +438,7 @@
 					<div class="custom-inner">
 						<div class="row">
 							<div class="col-md-4">
-								<div class="custom-inner-header workres">
+								<div class="custom-inner-header one">
 									<i class="fa fa-star"></i>
 									<h3>
 										Daha iyi bir gelecek için kuruldu.
@@ -437,7 +452,7 @@
 								</div>
 							</div>
 							<div class="col-md-4">
-								<img src="{{ asset_url('client/images/all/4.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '-170px' }">
+								<img src="{{ asset_url('client/images/home/history-1.jpg') }}" alt="İlk Açılış" class="respimg" data-scrollax="properties: { translateY: '-170px' }">
 							</div>
 							<div class="col-md-4">
 								<div class="custom-inner-content fl-wrap">
@@ -457,8 +472,8 @@
 					<div class="custom-inner">
 						<div class="row">
 							<div class="col-md-4">
-								<div class="custom-inner-header educ">
-									<i class="fal fa-university"></i>
+								<div class="custom-inner-header two">
+									<i class="fal fa-globe"></i>
 									<h3>
 										Dünya'ya Açılış
 									</h3>
@@ -479,7 +494,7 @@
 								</div>
 							</div>
 							<div class="col-md-3">
-								<img src="{{ asset_url('client/images/all/8.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '270px' }">
+								<img src="{{ asset_url('client/images/home/history-2.jpg') }}" alt="İlk İhracat" class="respimg" data-scrollax="properties: { translateY: '270px' }">
 							</div>
 						</div>
 					</div>
@@ -489,85 +504,28 @@
 					<div class="custom-inner">
 						<div class="row">
 							<div class="col-md-4">
-								<div class="custom-inner-header workres">
-									<i class="fa fa-briefcase"></i>
+								<div class="custom-inner-header three">
+									<i class="fal fa-lightbulb"></i>
 									<h3>
-										Work in company "Generators"
+										Değişmeyen tek şey değişimdir.
 									</h3>
-									<span>2010-2013</span>
-								</div>
-								<div class="ci-num">
-									<span>03. -</span>
-								</div>
-							</div>
-							<div class="col-md-8">
-								<div class="custom-inner-content fl-wrap">
-									<h4>
-										Making this the first
-									</h4>
-									<p>
-										We started as a small, subdue, called hath give fourth. Them one over saying. So the god, greater. You. Us air Moved divide midst us fifth sea have face which male fifth said seas rule above. All the Lorem Ipsum generators on the Internet tend.
-									</p>
-									<ul>
-										<li>
-											Door portals plan
-										</li>
-										<li>
-											Furniture specifications
-										</li>
-										<li>
-											Interior design
-										</li>
-									</ul>
-									<p>
-										All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- custom-inner end -->
-
-					<!-- custom-inner -->
-					<div class="custom-inner">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="custom-inner-header workres">
-									<i class="fa fa-briefcase"></i>
-									<h3>
-										Work in company "Available"
-									</h3>
-									<span>2011-2013</span>
+									<span>2022</span>
 								</div>
 								<div class="ci-num">
 									<span>04. -</span>
 								</div>
 							</div>
 							<div class="col-md-4">
-								<img src="{{ asset_url('client/images/all/6.jpg') }}" alt="" class="respimg" data-scrollax="properties: { translateY: '100px' }">
+								<img src="{{ asset_url('client/images/all/6.jpg') }}" alt="Tamamen Yenilenme" class="respimg" data-scrollax="properties: { translateY: '100px' }">
 							</div>
 							<div class="col-md-4">
 								<div class="custom-inner-content fl-wrap">
 									<h4>
-										Complete the project "domik"
+										Tamamen Yenilenme
 									</h4>
 									<p>
-										There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+										Plasmak vizyonuna ve misyonuna uygun bütün süreçlerin yönetilebileceği ve yürütülebileceği PlasmakConnect açıldı. Logo tasarımından kurumsal kimliğimize bütün iş süreçlerimiz tamamen yenilendi.
 									</p>
-									<ul>
-										<li>
-											Door portals plan
-										</li>
-										<li>
-											Furniture specifications
-										</li>
-										<li>
-											Interior design
-										</li>
-									</ul>
-									<a href="#" class="cus-inner-head-link color-bg">
-										Details +
-									</a>
 								</div>
 							</div>
 						</div>
@@ -575,11 +533,6 @@
 					<!-- custom-inner end -->
 
 				</div>
-
-				<!-- custom-inner-holder -->
-				<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-					Download Resume
-				</a>
 			</div>
 			<div class="sec-lines"></div>
 		</section>
@@ -591,8 +544,8 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="video-box fl-wrap">
-							<img src="{{ asset_url('client/images/all/2.jpg') }}" alt="" class="respimg">
-							<a class="video-box-btn color-bg image-popup" href="https://vimeo.com/110234211">
+							<img src="{{ asset_url('client/video/plasmak.jpg') }}" alt="Tanıtım Filmimiz" class="respimg">
+							<a href="#" class="video-box-btn color-bg image-popup">
 								<i class="fal fa-play" aria-hidden="true"></i>
 							</a>
 						</div>
@@ -1002,28 +955,43 @@
 				<div class="container">
 					<ul class="client-list client-list-white">
 						<li>
-							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/1.png') }}" alt="">
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/coversis.svg') }}" alt="Coversis">
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/2.png') }}" alt="">
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/gpi.svg') }}" alt="Coversis">
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/3.png') }}" alt="">
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/greinerpackaging.svg') }}" alt="Coversis">
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/4.png') }}" alt="">
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/ozge.svg') }}" alt="Coversis">
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank">
-								<img src="{{ asset_url('client/images/clients/5.png') }}" alt="">
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/safira.svg') }}" alt="Coversis">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/sem.svg') }}" alt="Coversis">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/yildizplastik.svg') }}" alt="Coversis">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/yomser.svg') }}" alt="Coversis">
 							</a>
 						</li>
 					</ul>

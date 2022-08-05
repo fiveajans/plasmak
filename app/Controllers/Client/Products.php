@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Client;
 
-use Core\Controller;
+use App\Controllers\Client;
 use PDO;
 
-class Products extends Controller
+class Products extends Client
 {
 	public function list()
 	{
@@ -28,12 +28,10 @@ class Products extends Controller
 
         $products = $this->db->query($sql, PDO::FETCH_OBJ);
 
-        $data = [
-			'categories' => $categories,
-            'products' => $products
-        ];
+		$this->data['categories'] = $categories;
+		$this->data['products'] = $products;
 
-		return $this->view('client.pages.products.list', $data);
+		return $this->view('client.pages.products.list', $this->data);
 	}
 
 	public function detail($slug)
@@ -80,13 +78,11 @@ class Products extends Controller
 
 		$nextProduct = $this->db->query($sql)->fetch(PDO::FETCH_OBJ);
 
-		$data = [
-			'product' => $product,
-			'images' => $images,
-			'prevProduct' => $prevProduct,
-			'nextProduct' => $nextProduct
-		];
+		$this->data['product'] = $product;
+		$this->data['images'] = $images;
+		$this->data['prevProduct'] = $prevProduct;
+		$this->data['nextProduct'] = $nextProduct;
 
-		return $this->view('client.pages.products.detail', $data);
+		return $this->view('client.pages.products.detail', $this->data);
 	}
 }

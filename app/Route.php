@@ -45,6 +45,8 @@ $app->router->group('/kurumsal', function ($router) {
 
 });
 
+$app->router->get('/bize-ulasin', 'Client.ContactUs@index');
+
 $app->router->group('/admin', function ($router) {
 
 	$router->get('/', function () {

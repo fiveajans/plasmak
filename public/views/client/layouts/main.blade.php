@@ -217,18 +217,43 @@
 									<span>Keşfet</span>
 								</div>
 							</div>
-							<div class="col-md-5">
-								<div class="footer-header fl-wrap">
-									<span>01.</span>
-									Son Haberler
+
+							@if ($recentNews->rowCount())
+
+								<div class="col-md-5">
+									<div class="footer-header fl-wrap">
+										<span>01.</span>
+										Son Haberler
+									</div>
+									<div class="footer-box fl-wrap">
+										<div class="twitter-swiper-container fl-wrap" id="twitts-container">
+											<ul>
+
+												@foreach ($recentNews as $article)
+
+													<li>
+														<p class="tweet">
+															{{ $article->description }}
+														</p>
+														<p class="timePosted">
+															<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}">
+																{{ timeHumanize($article->created_at) }}
+															</a>
+														</p>
+													</li>
+
+												@endforeach
+
+											</ul>
+										</div>
+										<a href="{{ site_url('kurumsal/guncel-haberler') }}" class="btn float-btn trsp-btn">
+											Daha Fazlası
+										</a>
+									</div>
 								</div>
-								<div class="footer-box fl-wrap">
-									<div class="twitter-swiper-container fl-wrap" id="twitts-container"></div>
-									<a href="{{ site_url('') }}" class="btn float-btn trsp-btn">
-										Daha Fazlası
-									</a>
-								</div>
-							</div>
+
+							@endif
+
 							<div class="col-md-5">
 								<div class="footer-header fl-wrap">
 									<span>02.</span>

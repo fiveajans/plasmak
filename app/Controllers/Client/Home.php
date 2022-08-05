@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Client;
 
-use Core\Controller;
+use App\Controllers\Client;
 use PDO;
 
-class Home extends Controller
+class Home extends Client
 {
 	public function index()
 	{
@@ -19,12 +19,8 @@ class Home extends Controller
 		WHERE (p.deleted_at IS NULL && pimg.deleted_at IS NULL && pc.deleted_at IS NULL)
 		&& p.default_image = pimg.id";
 
-        $products = $this->db->query($sql, PDO::FETCH_OBJ);
+		$this->data['products'] = $this->db->query($sql, PDO::FETCH_OBJ);
 
-        $data = [
-            'products' => $products
-        ];
-
-		return $this->view('client.pages.home', $data);
+		return $this->view('client.pages.home', $this->data);
 	}
 }

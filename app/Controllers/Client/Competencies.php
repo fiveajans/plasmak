@@ -2,27 +2,27 @@
 
 namespace App\Controllers\Client;
 
-use Core\Controller;
+use App\Controllers\Client;
 
-class Competencies extends Controller
+class Competencies extends Client
 {
 	public function production()
 	{
-		return $this->view('client.pages.compotencies.production');
+		return $this->view('client.pages.compotencies.production', $this->data);
 	}
 
 	public function arge()
 	{
-		return $this->view('client.pages.compotencies.arge');
+		return $this->view('client.pages.compotencies.arge', $this->data);
 	}
 
 	public function technology()
 	{
-		return $this->view('client.pages.compotencies.technology');
+		return $this->view('client.pages.compotencies.technology', $this->data);
 	}
 
 	public function distribution()
 	{
-		return $this->view('client.pages.compotencies.distribution');
+		return $this->view('client.pages.compotencies.distribution', $this->data);
 	}
 }

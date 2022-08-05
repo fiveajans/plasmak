@@ -520,7 +520,7 @@ function initSolonick() {
     });
     $('.cs-wrap .hero-wrap , .nav-holder').perfectScrollbar({});
     // twitter ------------------
-    if ($("#twitts-container").length > 0) {
+    /*if ($("#twitts-container").length > 0) {
         var config1 = {
             "profile": {
                 "screenName": 'envatomarket'
@@ -531,7 +531,7 @@ function initSolonick() {
             "showImages": false
         };
         twitterFetcher.fetch(config1);
-    }
+    }*/
     //   Contact form------------------
     $("#contactform").submit(function () {
         var a = $(this).attr("action");

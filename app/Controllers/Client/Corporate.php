@@ -2,10 +2,10 @@
 
 namespace App\Controllers\Client;
 
-use Core\Controller;
+use App\Controllers\Client;
 use PDO;
 
-class Corporate extends Controller
+class Corporate extends Client
 {
 	public function recentNews()
 	{
@@ -35,17 +35,15 @@ class Corporate extends Controller
 
         $categories = $this->db->query($sql, PDO::FETCH_OBJ);
 
-		$data = [
-			'articles' => $articles,
-			'tags' => $tags,
-			'categories' => $categories
-		];
+		$this->data['articles'] = $articles;
+		$this->data['tags'] = $tags;
+		$this->data['categories'] = $categories;
 
-		return $this->view('client.pages.corporate.recent-news.list', $data);
+		return $this->view('client.pages.corporate.recent-news.list', $this->data);
 	}
 
 	public function recentNewsDetail()
 	{
-		return $this->view('client.pages.corporate.recent-news.detail');
+		return $this->view('client.pages.corporate.recent-news.detail', $this->data);
 	}
 }
