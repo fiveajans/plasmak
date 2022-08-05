@@ -246,7 +246,7 @@
 
 @section('scripts')
 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBPto8YIjAsz8AO5CQyti9DWq0slAryBI4"></script>
 	<script type="text/javascript" src="{{ asset_url('client/js/map.js') }}"></script>
 
 @endsection
