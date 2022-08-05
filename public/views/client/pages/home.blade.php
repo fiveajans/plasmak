@@ -872,183 +872,76 @@
 		</section>
 		<!-- section end -->
 
-		<!-- section -->
-		<section class="dark-bg" id="sec5">
-			<div class="fet_pr-carousel-title">
-				<div class="fet_pr-carousel-title-item">
-					<h3>
-						Üretim
-					</h3>
-					<p>
-						Çağdaş iş anlaşı ile üretim yaparak teknolojiye yön vererek geleceğe ortak olmanızı sağlıyoruz.
-					</p>
-					<a href="portfolio.html" class="btn float-btn flat-btn color-btn mar-top">
-						Daha Fazla
-					</a>
+		@if ($products->rowCount())
+
+			<!-- section -->
+			<section class="dark-bg" id="sec5">
+				<div class="fet_pr-carousel-title">
+					<div class="fet_pr-carousel-title-item">
+						<h3>
+							Üretim
+						</h3>
+						<p>
+							Çağdaş iş anlaşı ile üretim yaparak teknolojiye yön vererek geleceğe ortak olmanızı sağlıyoruz.
+						</p>
+						<a href="{{ site_url('urunlerimiz') }}" class="btn float-btn flat-btn color-btn mar-top">
+							Daha Fazla
+						</a>
+					</div>
 				</div>
-			</div>
 
-			<!--slider-carousel-wrap -->
-			<div class="slider-carousel-wrap fl-wrap">
+				<!--slider-carousel-wrap -->
+				<div class="slider-carousel-wrap fl-wrap">
 
-				<!--fet_pr-carousel -->
-				<div class="fet_pr-carousel cur_carousel-slider-container fl-wrap">
+					<!--fet_pr-carousel -->
+					<div class="fet_pr-carousel cur_carousel-slider-container fl-wrap">
 
-					<!--slick-item -->
-					<div class="slick-item">
-						<div class="fet_pr-carousel-box">
-							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/3.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/3.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-search"></i>
-								</a>
-							</div>
-							<div class="fet_pr-carousel-box-text fl-wrap">
-								<h3>
-									<a href="portfolio-single.html">
-										Lokomotive Project
-									</a>
-								</h3>
-								<div class="fet_pr-carousel-cat">
-									<a href="#">
-										Branding
-									</a>
-									<a href="#">
-										Web Design
-									</a>
+						@foreach ($products as $product)
+
+							<!--slick-item -->
+							<div class="slick-item">
+								<div class="fet_pr-carousel-box">
+									<div class="fet_pr-carousel-box-media fl-wrap">
+										<img src="{{ upload_url('images/cache/products/800x530/' . $product->image_url) }}" alt="{{ $product->name }}" class="respimg">
+										<a href="{{ upload_url('images/original/products/' . $product->image_url) }}" class="fet_pr-carousel-box-media-zoom image-popup">
+											<i class="fal fa-search"></i>
+										</a>
+									</div>
+									<div class="fet_pr-carousel-box-text fl-wrap">
+										<h3>
+											<a href="{{ site_url('urunlerimiz/' . $product->slug) }}">
+												{{ $product->name }}
+											</a>
+										</h3>
+										<div class="fet_pr-carousel-cat">
+											<a href="javascript:void(0)">
+												{{ $product->category_name }}
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<!-- slick-item end -->
+							<!-- slick-item end -->
 
-					<!-- slick-item -->
-					<div class="slick-item">
-						<div class="fet_pr-carousel-box">
-							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/4.jpg') }}" alt="" class="respimg">
-								<a href="https://vimeo.com/183619886" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-play"></i>
-								</a>
-							</div>
-							<div class="fet_pr-carousel-box-text fl-wrap">
-								<h3>
-									<a href="portfolio-single.html">
-										Architecture Agensy
-									</a>
-								</h3>
-								<div class="fet_pr-carousel-cat">
-									<a href="#">
-										Photography
-									</a>
-									<a href="#">
-										Web Design
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- slick-item end -->
+						@endforeach
 
-					<!-- slick-item -->
-					<div class="slick-item">
-						<div class="fet_pr-carousel-box">
-							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/1.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/1.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-search"></i>
-								</a>
-							</div>
-							<div class="fet_pr-carousel-box-text fl-wrap">
-								<h3>
-									<a href="portfolio-single.html">
-										Corporate website
-									</a>
-								</h3>
-								<div class="fet_pr-carousel-cat">
-									<a href="#">
-										Branding
-									</a>
-									<a href="#">
-										Web
-									</a>
-								</div>
-							</div>
-						</div>
 					</div>
-					<!-- slick-item end -->
+					<!-- fet_pr-carousel end -->
 
-					<!-- slick-item -->
-					<div class="slick-item">
-						<div class="fet_pr-carousel-box">
-							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/2.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/2.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-search"></i>
-								</a>
-							</div>
-							<div class="fet_pr-carousel-box-text fl-wrap">
-								<h3>
-									<a href="portfolio-single.html">
-										Mobile ui Interface
-									</a>
-								</h3>
-								<div class="fet_pr-carousel-cat">
-									<a href="#">
-										UI/UX
-									</a>
-									<a href="#">
-										Web Design
-									</a>
-								</div>
-							</div>
-						</div>
+					<div class="sp-cont sp-arr sp-cont-prev">
+						<i class="fal fa-long-arrow-left"></i>
 					</div>
-					<!-- slick-item end -->
-
-					<!-- slick-item -->
-					<div class="slick-item">
-						<div class="fet_pr-carousel-box">
-							<div class="fet_pr-carousel-box-media fl-wrap">
-								<img src="{{ asset_url('client/images/folio/web/slider/5.jpg') }}" alt="" class="respimg">
-								<a href="{{ asset_url('client/images/folio/web/slider/5.jpg') }}" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-search"></i>
-								</a>
-							</div>
-							<div class="fet_pr-carousel-box-text fl-wrap">
-								<h3>
-									<a href="portfolio-single.html">
-										Fashion Agensy
-									</a>
-								</h3>
-								<div class="fet_pr-carousel-cat">
-									<a href="#">
-										Development
-									</a>
-									<a href="#">
-										Web Design
-									</a>
-								</div>
-							</div>
-						</div>
+					<div class="sp-cont sp-arr sp-cont-next">
+						<i class="fal fa-long-arrow-right"></i>
 					</div>
-					<!-- slick-item end -->
-
 				</div>
-				<!-- fet_pr-carousel end -->
+				<!-- slider-carousel-wrap end -->
 
-				<div class="sp-cont sp-arr sp-cont-prev">
-					<i class="fal fa-long-arrow-left"></i>
-				</div>
-				<div class="sp-cont sp-arr sp-cont-next">
-					<i class="fal fa-long-arrow-right"></i>
-				</div>
-			</div>
-			<!-- slider-carousel-wrap end -->
+				<div class="fet_pr-carousel-counter"></div>
+			</section>
+			<!-- section end -->
 
-			<div class="fet_pr-carousel-counter"></div>
-		</section>
-		<!-- section end -->
+		@endif
 
 		<!-- section -->
 		<section data-scrollax-parent="true" id="sec6">
