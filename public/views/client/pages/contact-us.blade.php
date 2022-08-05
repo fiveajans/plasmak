@@ -26,9 +26,13 @@
 
 		<!-- section-->
 		<section class="parallax-section dark-bg sec-half parallax-sec-half-right" data-scrollax-parent="true">
-			<div class="bg par-elem" data-bg="{{ asset_url('client/images/bg/28.jpg') }}" data-scrollax="properties: { translateY: '30%' }"></div>
-			<div class="overlay"></div>
-			<div class="pattern-bg"></div>
+			<div class="bg par-elem" data-bg="{{ asset_url('client/video/contact.jpg') }}" data-scrollax="properties: { translateY: '100%' }">
+				<video autoplay loop muted class="bgvid" style="object-fit: cover">
+					<source src="{{ asset_url('client/video/contact.mp4') }}" type="video/mp4">
+				</video>
+			</div>
+			<!--<div class="overlay"></div>
+			<div class="pattern-bg"></div>-->
 			<div class="container">
 				<div class="section-title">
 					<h2>
@@ -62,8 +66,10 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="pr-title fl-wrap">
-								<h3>Contact Details</h3>
-								<span>Lorem Ipsum generators on the Internet   king this the first true generator</span>
+								<h3>
+									İletişim Detayları
+								</h3>
+								<span>Sizin için iletişim adreslerimiz.</span>
 							</div>
 						</div>
 						<div class="col-md-9">
@@ -77,8 +83,8 @@
 										<div class="time-line-icon">
 											<i class="fal fa-mobile-android"></i>
 										</div>
-										<h3>01. Phone</h3>
-										<a href="#">+489756412322</a>
+										<h3>01. Telefon</h3>
+										<a href="tel:+90 212 671 74 59">+90 212 671 74 59</a>
 									</div>
 									<!-- features-box end  -->
 
@@ -87,8 +93,10 @@
 										<div class="time-line-icon">
 											<i class="fal fa-compass"></i>
 										</div>
-										<h3>02. Location</h3>
-										<a href="#">USA 27TH Brooklyn NY</a>
+										<h3>02. Adres</h3>
+										<a href="https://goo.gl/maps/N2ha3xAN6FWZmwi36" target="_blank">
+											İkitelli OSB Demirciler San. Sit. E-1 Blok No:366 Başakşehir/İstanbul, Türkiye
+										</a>
 									</div>
 									<!-- features-box end  -->
 
@@ -97,8 +105,8 @@
 										<div class="time-line-icon">
 											<i class="fal fa-envelope-open"></i>
 										</div>
-										<h3>03. Email</h3>
-										<a href="#">yourmail@domain.com</a>
+										<h3>03. E-posta</h3>
+										<a href="mailto:info@plasmak.com.tr">info@plasmak.com.tr</a>
 									</div>
 									<!-- features-box end  -->
 
@@ -113,7 +121,7 @@
 
 				<div class="fw-map-container fl-wrap mar-bottom">
 					<div class="map-container">
-						<div id="singleMap" data-latitude="40.7143528" data-longitude="-74.0059731" data-mapTitle="Plasmak Harita"></div>
+						<div id="singleMap" data-latitude="41.0672357" data-longitude="28.8086735" data-mapTitle="Plasmak Harita"></div>
 					</div>
 				</div>
 				<!--  map end  --> 
@@ -122,51 +130,75 @@
 					<div class="row">
 						<div class="col-md-3">
 							<div class="pr-title fl-wrap">
-								<h3>Get In Touch</h3>
-								<span>Lorem Ipsum generators on the Internet   king this the first true generator</span>
+								<h3>Bize Yazın</h3>
+								<span>Formu doldurarak kolaylıkla bize ulaşabilirsiniz.</span>
 							</div>
 						</div>
 						<div class="col-md-7">
 							<div id="contact-form">
 								<div id="message"></div>
-								<form  class="custom-form" action="" name="contactform" id="contactform">
+								<form  class="custom-form" action="" name="contactform">
 									<fieldset>
 										<div class="row">
 											<div class="col-md-6">
 												<label><i class="fal fa-user"></i></label>
-												<input type="text" name="name" id="name" placeholder="Your Name *" value=""/>
+												<input type="text" name="name" id="name" placeholder="Ad Soyad *" value=""/>
 											</div>
 											<div class="col-md-6">
 												<label><i class="fal fa-envelope"></i> </label>
-												<input type="text"  name="email" id="email" placeholder="Email Address *" value=""/>
+												<input type="text"  name="email" id="email" placeholder="E-posta Adresi *" value=""/>
 											</div>
 											<div class="col-md-6">
 												<label><i class="fal fa-mobile-android"></i> </label>
-												<input type="text"  name="phone" id="phone" placeholder="Phone *" value=""/>
+												<input type="text"  name="phone" id="phone" placeholder="Telefon *" value=""/>
 											</div>
 											<div class="col-md-6">
-												<select name="subject" id="subject" data-placeholder="Subject" class="chosen-select sel-dec">
-													<option>Subject</option>
-													<option value="Order Project">Order Project</option>
-													<option value="Support">Support</option>
-													<option value="Other Question">Other Question</option>
+												<select name="subject" id="subject" class="chosen-select sel-dec">
+													<option selected disabled>
+														Konu
+													</option>
+													<option value="Üretim">
+														Üretim
+													</option>
+													<option value="Satış">
+														Satış
+													</option>
+													<option value="Muhasebe">
+														Muhasebe
+													</option>
+													<option value="Destek">
+														Destek
+													</option>
+													<option value="PlasmakConnect">
+														PlasmakConnect
+													</option>
 												</select>
 											</div>
 										</div>
-										<textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
+										<textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Mesajınız:"></textarea>
 										<div class="verify-wrap">
-											<span class="verify-text"> How many gnomes were in the story about the "Snow-white" ?</span> 
-											<select name="verify" id="verify" data-placeholder="0" class="chosen-select">
-												<option>0</option>
-												<option value="9">9</option>
-												<option value="5">5</option>
-												<option value="7">7</option>
-												<option value="2">2</option>
+											<span class="verify-text">Robot değil misiniz? Türkiye'nin başkenti neresi?</span> 
+											<select name="verify" id="verify" class="chosen-select">
+												<option selected disabled>
+													Şehir Seç
+												</option>
+												<option value="Ankara">
+													Ankara
+												</option>
+												<option value="İstanbul">
+													İstanbul
+												</option>
+												<option value="Samsun">
+													Samsun
+												</option>
+												<option value="İzmir">
+													İzmir
+												</option>
 											</select>
 										</div>
 										<div class="clearfix"></div>
-										<button class="btn float-btn flat-btn color-btn" id="submit">
-											Send Message
+										<button type="submit" class="btn float-btn flat-btn color-btn">
+											Gönder
 										</button>
 									</fieldset>
 								</form>
@@ -213,4 +245,8 @@
 @endsection
 
 @section('scripts')
+
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDwJSRi0zFjDemECmFl9JtRj1FY7TiTRRo"></script>
+	<script type="text/javascript" src="{{ asset_url('client/js/map.js') }}"></script>
+
 @endsection

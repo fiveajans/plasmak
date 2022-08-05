@@ -956,42 +956,47 @@
 					<ul class="client-list client-list-white">
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/coversis.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/coversis.svg') }}" alt="Coveris">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/gpi.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/gpi.svg') }}" alt="GPI">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/greinerpackaging.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/greinerpackaging.svg') }}" alt="greiner packaging">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/ozge.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/ozge.svg') }}" alt="ÖZGE">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/safira.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/safira.svg') }}" alt="safira ambalaj">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/sem.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/sem.svg') }}" alt="SEM">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/yildizplastik.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/yildizplastik.svg') }}" alt="YILDIZ PLASTİK">
 							</a>
 						</li>
 						<li>
 							<a href="javascript:void(0)">
-								<img src="{{ asset_url('client/images/clients/yomser.svg') }}" alt="Coversis">
+								<img src="{{ asset_url('client/images/clients/yomser.svg') }}" alt="YÖMSER">
+							</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
+								<img src="{{ asset_url('client/images/clients/poltermref.svg') }}" alt="POLTERM">
 							</a>
 						</li>
 					</ul>

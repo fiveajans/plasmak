@@ -58,6 +58,10 @@
 				body {
 					background-image: url({{ asset_url('connect/media/auth/bg4-dark.jpg') }})
 				}
+				
+				/*[data-theme="dark"] body {
+					background-image: url({{ asset_url('connect/media/auth/bg4-dark.jpg') }});
+				}*/
 			</style>
 			<!--end::Page bg image-->
 
