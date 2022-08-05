@@ -66,22 +66,13 @@
 				<div class="half-slider-img fl-wrap full-height">
 
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/1.jpg') }}" data-scrollax="properties: { translateY: '250px' }">
-							<div class="video-container">
-                                <video autoplay loop muted class="bgvid">
-                                    <source src="{{ asset_url('client/video/2.mp4') }}" type="video/mp4">
-                                </video>
-                            </div>
+						<div class="bg" style="background-repeat: no-repeat" data-bg="{{ asset_url('client/video/plasmak.jpg') }}" data-scrollax="properties: { translateY: '250px' }">
+							<video autoplay loop muted class="bgvid" style="object-fit: cover">
+								<source src="{{ asset_url('client/video/plasmak.mp4') }}" type="video/mp4">
+							</video>
 						</div>
 						<div class="overlay"></div>
 					</div>
-
-					<!-- half-slider-img item -->
-					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/3.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
-						<div class="overlay"></div>
-					</div>
-					<!-- half-slider-img item end -->
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
@@ -92,10 +83,10 @@
 
 					<!-- half-slider-img item -->
 					<div class="half-slider-img-item">
-						<div class="bg" data-bg="{{ asset_url('client/images/2.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
+						<div class="bg" data-bg="{{ asset_url('client/images/3.jpg') }}" data-scrollax="properties: { translateY: '250px' }"></div>
 						<div class="overlay"></div>
 					</div>
-					<!-- half-slider-img item end -->
+					<!-- half-slider-img item end -->>
 
 				</div>
 				<!-- half-slider-img end -->
@@ -108,25 +99,6 @@
 
 				<!-- slider-nav -->
 				<div class="slider-nav cur_carousel-slider-container" data-slick='{"autoplay": true, "autoplaySpeed": 4000 , "pauseOnHover": false}'>
-
-					<!-- half-slider-item -->
-					<div class="half-slider-item fl-wrap">
-						<div class="half-hero-wrap">
-							<h1>
-								Video
-								<br>
-								<span>Başlığı.</span>
-							</h1>
-							<h4>
-								Daha Fazlası İçin
-							</h4>
-							<div class="clearfix"></div>
-							<a href="#" class="custom-scroll-link btn float-btn flat-btn color-btn mar-top">
-								Şimdi Başla
-							</a>
-						</div>
-					</div>
-					<!-- half-slider-item end -->
 
 					<!-- half-slider-item -->
 					<div class="half-slider-item fl-wrap">
@@ -159,8 +131,8 @@
 								Daha Fazlası İçin
 							</h4>
 							<div class="clearfix"></div>
-							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-								Ürünleri Keşfet
+							<a href="{{ site_url('plasmak-dunyasi/plasmak-perfect') }}" class="btn float-btn flat-btn color-btn mar-top">
+								Daha Fazla
 							</a>
 						</div>
 					</div>
@@ -179,7 +151,7 @@
 							</h4>
 							<div class="clearfix"></div>
 							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
-								Şimdi Başla
+								Ürünleri Keşfet
 							</a>
 						</div>
 					</div>
