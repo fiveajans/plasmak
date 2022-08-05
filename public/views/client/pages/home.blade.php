@@ -302,7 +302,7 @@
 							</div>
 							<!-- features-box-container end -->
 
-							<a href="portfolio.html" class="btn float-btn flat-btn color-btn">
+							<a href="#" class="btn float-btn flat-btn color-btn">
 								Daha Fazla
 							</a>
 						</div>
