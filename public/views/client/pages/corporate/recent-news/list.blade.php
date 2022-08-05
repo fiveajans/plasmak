@@ -53,31 +53,35 @@
 			<div class="blog-filters">
 				<span>Filtrele:</span>
 
-				<!-- filter tag   -->
-				<div class="tag-filter blog-btn-filter">
-					<div class="blog-btn">
-						Etiketler
-						<i class="fa fa-tags" aria-hidden="true"></i>
-					</div>
-					<ul>
+				@if ($tags->rowCount())
 
-						@foreach ($tags as $tag)
+					<!-- filter tag   -->
+					<div class="tag-filter blog-btn-filter">
+						<div class="blog-btn">
+							Etiketler
+							<i class="fa fa-tags" aria-hidden="true"></i>
+						</div>
+						<ul>
 
-							@foreach (tagsHumanize($tag->tags) as $item)
+							@foreach ($tags as $tag)
 
-								<li>
-									<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $item) }}">
-										{{ $item }}
-									</a>
-								</li>
+								@foreach (tagsHumanize($tag->tags) as $item)
+
+									<li>
+										<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $item) }}">
+											{{ $item }}
+										</a>
+									</li>
+
+								@endforeach
 
 							@endforeach
 
-						@endforeach
+						</ul>
+					</div>
+					<!-- filter tag end  -->
 
-					</ul>
-				</div>
-				<!-- filter tag end  -->
+				@endif
 
 				<!-- filter category    -->
 				<div class="category-filter blog-btn-filter">
@@ -123,160 +127,170 @@
 			</div>
 			<div class="container">
 
-				<!-- blog-container  -->
-				<div class="fl-wrap post-container">
-					<div class="row">
-						<div class="col-md-8">
+				@if ($articles->rowCount())
 
-							@foreach ($articles as $article)
+					<!-- blog-container  -->
+					<div class="fl-wrap post-container">
+						<div class="row">
+							<div class="col-md-8">
 
-								<!-- post -->
-								<div class="post fl-wrap fw-post">
-									<h2>
-										<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}">
-											<span>{{ $article->name }}</span>
-										</a>
-									</h2>
-									<div class="parallax-header">
-										<a href="javascript:void(0)">
-											{{ timeHumanize($article->created_at) }}
-											<!--4 Ağustos 2022-->
-										</a>
-										<span>Kategori:</span>
-										<a href="{{ site_url('kurumsal/guncel-haberler/kategori/' . $article->category_slug) }}">
-											{{ $article->category_name }}
-										</a>
-									</div>
+								@foreach ($articles as $article)
 
-									<!-- blog media -->
-									<div class="blog-media fl-wrap mb-15">
-										<img src="{{ upload_url('images/cache/articles/800x530/' . $article->image_url) }}" alt="{{ $article->name }}">
-									</div>
-									<!-- blog media end -->
-
-									<div class="parallax-header fl-wrap">
-										<span>Etiketler:</span>
-
-										@foreach (tagsHumanize($article->tags) as $tag)
-
-											<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $tag) }}">
-												{{ $tag }}
-											</a>
-
-										@endforeach
-
-									</div>
-									<div class="blog-text fl-wrap">
-										<div class="clearfix"></div>
-										<h3>
+									<!-- post -->
+									<div class="post fl-wrap fw-post">
+										<h2>
 											<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}">
-												{{ $article->name }}
+												<span>{{ $article->name }}</span>
 											</a>
-										</h3>
-										<p>
-											{{ $article->description }}
-										</p>
-										<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}" class="btn float-btn color-btn flat-btn">
-											Devamını Oku
-										</a>
+										</h2>
+										<div class="parallax-header">
+											<a href="javascript:void(0)">
+												{{ timeHumanize($article->created_at) }}
+												<!--4 Ağustos 2022-->
+											</a>
+											<span>Kategori:</span>
+											<a href="{{ site_url('kurumsal/guncel-haberler/kategori/' . $article->category_slug) }}">
+												{{ $article->category_name }}
+											</a>
+										</div>
+
+										<!-- blog media -->
+										<div class="blog-media fl-wrap mb-15">
+											<img src="{{ upload_url('images/cache/articles/800x530/' . $article->image_url) }}" alt="{{ $article->name }}">
+										</div>
+										<!-- blog media end -->
+
+										<div class="parallax-header fl-wrap">
+											<span>Etiketler:</span>
+
+											@foreach (tagsHumanize($article->tags) as $tag)
+
+												<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $tag) }}">
+													{{ $tag }}
+												</a>
+
+											@endforeach
+
+										</div>
+										<div class="blog-text fl-wrap">
+											<div class="clearfix"></div>
+											<h3>
+												<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}">
+													{{ $article->name }}
+												</a>
+											</h3>
+											<p>
+												{{ $article->description }}
+											</p>
+											<a href="{{ site_url('kurumsal/guncel-haberler/haber/' . $article->slug) }}" class="btn float-btn color-btn flat-btn">
+												Devamını Oku
+											</a>
+										</div>
 									</div>
-								</div>
-								<!-- post end-->
+									<!-- post end-->
 
-							@endforeach
+								@endforeach
 
-						</div>
+							</div>
 
-						<!-- blog-sidebar  -->
-						<div class="col-md-4">
-							<div class="blog-sidebar fl-wrap fixed-bar">
+							<!-- blog-sidebar  -->
+							<div class="col-md-4">
+								<div class="blog-sidebar fl-wrap fixed-bar">
 
-								<!-- widget-wrap -->
-								<div class="widget-wrap fl-wrap">
-									<h4 class="widget-title">
-										<span>01.</span>
-										Etiket Bulutu
-									</h4>
-									<div class="widget-container fl-wrap">
-										<ul class="tagcloud">
+									<!-- widget-wrap -->
+									<div class="widget-wrap fl-wrap">
+										<h4 class="widget-title">
+											<span>01.</span>
+											Etiket Bulutu
+										</h4>
+										<div class="widget-container fl-wrap">
+											<ul class="tagcloud">
 
-											@foreach ($tags as $tag)
+												@foreach ($tags as $tag)
 
-												@foreach (tagsHumanize($tag->tags) as $item)
+													@foreach (tagsHumanize($tag->tags) as $item)
+
+														<li>
+															<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $item) }}">
+																{{ $item }}
+															</a>
+														</li>
+
+													@endforeach
+
+												@endforeach
+
+											</ul>
+										</div>
+									</div>
+									<!-- widget-wrap end  -->
+
+									<!-- widget-wrap -->
+									<div class="widget-wrap fl-wrap">
+										<h4 class="widget-title">
+											<span>02.</span>
+											Kategoriler
+										</h4>
+										<div class="widget-container fl-wrap">
+											<ul class="cat-item">
+
+												@foreach ($categories as $category)
 
 													<li>
-														<a href="{{ site_url('kurumsal/guncel-haberler/etiket/' . $item) }}">
-															{{ $item }}
+														<a href="{{ site_url('kurumsal/guncel-haberler/kategori/' . $category->slug) }}">
+															{{ $category->name }}
 														</a>
+														<span>(3)</span>
 													</li>
 
 												@endforeach
 
-											@endforeach
-
-										</ul>
+											</ul>
+										</div>
 									</div>
+									<!-- widget-wrap end  -->
+
 								</div>
-								<!-- widget-wrap end  -->
-
-								<!-- widget-wrap -->
-								<div class="widget-wrap fl-wrap">
-									<h4 class="widget-title">
-										<span>02.</span>
-										Kategoriler
-									</h4>
-									<div class="widget-container fl-wrap">
-										<ul class="cat-item">
-
-											@foreach ($categories as $category)
-
-												<li>
-													<a href="{{ site_url('kurumsal/guncel-haberler/kategori/' . $category->slug) }}">
-														{{ $category->name }}
-													</a>
-													<span>(3)</span>
-												</li>
-
-											@endforeach
-
-										</ul>
-									</div>
-								</div>
-								<!-- widget-wrap end  -->
-
 							</div>
+							<!-- blog-sidebar end -->
+
+							<div class="limit-box fl-wrap"></div>
 						</div>
-						<!-- blog-sidebar end -->
 
-						<div class="limit-box fl-wrap"></div>
+						<!-- content-nav -->
+						<div class="content-nav">
+							<ul>
+								<li>
+									<a href="{{ site_url('kurumsal/guncel-haberler/sayfa/1') }}" class="ln">
+										<i class="fal fa-arrow-left"></i>
+										<span class="tooltip">Önceki - Sayfa 1</span>
+									</a>
+								</li>
+								<li>
+									<span class="cur-page">
+										<span>Sayfa 2</span>
+									</span>
+								</li>
+								<li>
+									<a href="{{ site_url('kurumsal/guncel-haberler/sayfa/3') }}" class="rn">
+										<i class="fal fa-arrow-right"></i>
+										<span class="tooltip">Sonraki - Sayfa 3</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- content-nav end-->
+
+					</div>
+					<!-- blog-container end -->
+
+				@else
+
+					<div class="alert alert-warning">
+						Sistemde kayıtlı haber bulunamadı.
 					</div>
 
-					<!-- content-nav -->
-					<div class="content-nav">
-						<ul>
-							<li>
-								<a href="{{ site_url('kurumsal/guncel-haberler/sayfa/1') }}" class="ln">
-									<i class="fal fa-arrow-left"></i>
-									<span class="tooltip">Önceki - Sayfa 1</span>
-								</a>
-							</li>
-							<li>
-								<span class="cur-page">
-									<span>Sayfa 2</span>
-								</span>
-							</li>
-							<li>
-								<a href="{{ site_url('kurumsal/guncel-haberler/sayfa/3') }}" class="rn">
-									<i class="fal fa-arrow-right"></i>
-									<span class="tooltip">Sonraki - Sayfa 3</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<!-- content-nav end-->
-
-				</div>
-				<!-- blog-container end -->
+				@endif
 
 			</div>
 			<div class="bg-parallax-module" data-position-top="50"  data-position-left="20" data-scrollax="properties: { translateY: '-250px' }"></div>
