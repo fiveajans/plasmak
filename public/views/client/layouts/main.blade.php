@@ -205,7 +205,7 @@
 
 			<!-- footer -->
 			<div class="height-emulator fl-wrap"></div>
-			<footer class="main-footer fixed-footer">
+			<footer class="main-footer fixed-footer" id="subscriber">
 
 				<!-- footer-inner -->
 				<div class="footer-inner fl-wrap">
@@ -266,13 +266,15 @@
 										Sizlere gereksiz e-posta göndermeyeceğimizin sözünü veriyoruz. E-posta kaydını gerçekleştirmeniz halinde işinize yarayacak bilgileri ve kampanyaları anlık olarak sizinle paylaşıyor olacağız.
 									</p>
 									<div class="subcribe-form fl-wrap">
-										<form class="fl-wrap" id="subscribe">
-											<input type="text" name="email" placeholder="E-posta adresinizi giriniz" class="enteremail" id="subscribe-email" spellcheck="false">
-											<button type="submit" class="subscribe-button" id="subscribe-button">
+										<form action="#subscriber" method="post" class="fl-wrap">
+											<input type="email" name="subscribe" placeholder="E-posta adresinizi giriniz" required class="enteremail">
+											<button type="submit" class="subscribe-button">
 												<i class="fal fa-paper-plane"></i>
 												Gönder
 											</button>
-											<label for="subscribe-email" class="subscribe-message"></label>
+											<label class="subscribe-message">
+												{{ $subscribe ? $subscribe['text'] : null }}
+											</label>
 										</form>
 									</div>
 
@@ -282,21 +284,21 @@
 											<li>
 												<i class="fal fa-phone"></i>
 												<span>Telefon & Fax:</span>
-												<a href="#">
+												<a href="tel:+90 212 671 74 59">
 													+90 212 671 74 59
 												</a>
 											</li>
 											<li>
 												<i class="fal fa-envelope"></i>
 												<span>E-posta:</span>
-												<a href="#">
+												<a href="mailto:info@plasmak.com.tr" style="text-transform: none">
 													info@plasmak.com.tr
 												</a>
 											</li>
 											<li>
 												<i class="fal fa-map-marker"></i>
 												<span>Adres:</span>
-												<a href="#">
+												<a href="https://goo.gl/maps/NeeNtYV8PG4uuH9a9" target="_blank">
 													İkitelli OSB Demirciler San. Sit. E-1 Blok No:366
 													<br>
 													Başakşehir/İstanbul, Türkiye

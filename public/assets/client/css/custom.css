@@ -31,3 +31,23 @@
 .hero-start-link span:before {
 	content: "Kaydır";
 }
+
+.alert {
+	color: #fff;
+	text-align: left;
+	padding: 15px;
+	margin-bottom: 15px;
+	
+}
+
+.alert-warning {
+	background-color: #ebbc21;
+}
+
+.alert-danger {
+	background-color: #d61f1f;
+}
+
+.alert-success {
+	background-color: #1f811f;
+}

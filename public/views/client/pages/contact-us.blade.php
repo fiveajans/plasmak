@@ -106,7 +106,7 @@
 											<i class="fal fa-envelope-open"></i>
 										</div>
 										<h3>03. E-posta</h3>
-										<a href="mailto:info@plasmak.com.tr">info@plasmak.com.tr</a>
+										<a href="mailto:info@plasmak.com.tr" style="text-transform: none">info@plasmak.com.tr</a>
 									</div>
 									<!-- features-box end  -->
 
@@ -119,9 +119,10 @@
 				</div>
 				<!-- contact details end  -->
 
-				<div class="fw-map-container fl-wrap mar-bottom">
+				<div class="fw-map-container fl-wrap mar-bottom" id="form-submit">
 					<div class="map-container">
-						<div id="singleMap" data-latitude="41.0672357" data-longitude="28.8086735" data-mapTitle="Plasmak Harita"></div>
+						<!--<div id="singleMap" data-latitude="41.0672357" data-longitude="28.8086735" data-mapTitle="Plasmak Harita"></div>-->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d752.0200939431653!2d28.8086735!3d41.0672357!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa59c94d6b44f%3A0xca7ad8ebd677de3f!2sPlasmak%20Makina%20ve%20Kal%C4%B1p!5e0!3m2!1str!2str!4v1659708088985!5m2!1str!2str" height="450" style="width: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 				</div>
 				<!--  map end  --> 
@@ -136,62 +137,76 @@
 						</div>
 						<div class="col-md-7">
 							<div id="contact-form">
-								<div id="message"></div>
-								<form  class="custom-form" action="" name="contactform">
+								
+								@if ($message)
+
+									<div class="alert alert-{{ $message['class'] }}">
+										{{ $message['text'] }}
+									</div>
+
+								@endif
+
+								<form action="#form-submit" method="post" class="custom-form">
 									<fieldset>
 										<div class="row">
 											<div class="col-md-6">
-												<label><i class="fal fa-user"></i></label>
-												<input type="text" name="name" id="name" placeholder="Ad Soyad *" value=""/>
+												<label>
+													<i class="fal fa-user"></i>
+												</label>
+												<input type="text" name="name" placeholder="Ad Soyad *" value="{{ $old ? $old['name'] : null }}" required>
 											</div>
 											<div class="col-md-6">
-												<label><i class="fal fa-envelope"></i> </label>
-												<input type="text"  name="email" id="email" placeholder="E-posta Adresi *" value=""/>
+												<label>
+													<i class="fal fa-envelope"></i>
+												</label>
+												<input type="email" name="email" placeholder="E-posta Adresi *" value="{{ $old ? $old['email'] : null }}" required>
 											</div>
 											<div class="col-md-6">
-												<label><i class="fal fa-mobile-android"></i> </label>
-												<input type="text"  name="phone" id="phone" placeholder="Telefon *" value=""/>
+												<label>
+													<i class="fal fa-mobile-android"></i>
+												</label>
+												<input type="text" name="phone" placeholder="Telefon *" value="{{ $old ? $old['phone'] : null }}" id="phone" required>
 											</div>
 											<div class="col-md-6">
-												<select name="subject" id="subject" class="chosen-select sel-dec">
-													<option selected disabled>
+												<select name="subject" class="chosen-select sel-dec" required>
+													<option {{ !$old ? 'selected' : null }} disabled>
 														Konu
 													</option>
-													<option value="Üretim">
+													<option value="Üretim" {{ $old && $old['subject'] == 'Üretim' ? 'selected' : null }}>
 														Üretim
 													</option>
-													<option value="Satış">
+													<option value="Satış" {{ $old && $old['subject'] == 'Satış' ? 'selected' : null }}>
 														Satış
 													</option>
-													<option value="Muhasebe">
+													<option value="Muhasebe" {{ $old && $old['subject'] == 'Muhasebe' ? 'selected' : null }}>
 														Muhasebe
 													</option>
-													<option value="Destek">
+													<option value="Destek" {{ $old && $old['subject'] == 'Destek' ? 'selected' : null }}>
 														Destek
 													</option>
-													<option value="PlasmakConnect">
+													<option value="PlasmakConnect" {{ $old && $old['subject'] == 'PlasmakConnect' ? 'selected' : null }}>
 														PlasmakConnect
 													</option>
 												</select>
 											</div>
 										</div>
-										<textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Mesajınız:"></textarea>
+										<textarea name="message" placeholder="Mesajınız:" cols="40" rows="3">{{ $old['message'] ?? null }}</textarea>
 										<div class="verify-wrap">
 											<span class="verify-text">Robot değil misiniz? Türkiye'nin başkenti neresi?</span> 
-											<select name="verify" id="verify" class="chosen-select">
+											<select name="robot" class="chosen-select" required>
 												<option selected disabled>
-													Şehir Seç
+													Şehir Seçiniz
 												</option>
-												<option value="Ankara">
+												<option value="06">
 													Ankara
 												</option>
-												<option value="İstanbul">
+												<option value="34">
 													İstanbul
 												</option>
-												<option value="Samsun">
+												<option value="55">
 													Samsun
 												</option>
-												<option value="İzmir">
+												<option value="35">
 													İzmir
 												</option>
 											</select>
@@ -203,7 +218,7 @@
 									</fieldset>
 								</form>
 							</div>
-							<!-- contact form  end--> 
+							<!-- contact form  end-->
 
 						</div>
 					</div>
@@ -246,7 +261,13 @@
 
 @section('scripts')
 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBPto8YIjAsz8AO5CQyti9DWq0slAryBI4"></script>
-	<script type="text/javascript" src="{{ asset_url('client/js/map.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+	<script>
+		$('#phone').mask('(000) 000 00 00');
+	</script>
+
+	<!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBPto8YIjAsz8AO5CQyti9DWq0slAryBI4"></script>
+	<script type="text/javascript" src="{{ asset_url('client/js/map.js') }}"></script>-->
 
 @endsection

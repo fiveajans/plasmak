@@ -137,7 +137,7 @@
 				<div class="parallax-item fl-wrap" data-scrollax-parent="true">
 					<div class="row">
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/folio/25.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/plasmakperfect/exclusive/1.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text right-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3>
@@ -150,8 +150,8 @@
 							</h4>
 						</div>
 						<div class="album-thumbnails">
-							<div data-position-left2="65" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/folio/11.jpg') }}" alt="" class="respimg"></div>
-							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }"><img src="{{ asset_url('client/images/folio/8.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="65" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/plasmakperfect/exclusive/2.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }"><img src="{{ asset_url('client/images/plasmakperfect/exclusive/3.jpg') }}" alt="" class="respimg"></div>
 						</div>
 					</div>
 					<div class="parallax-item-number rg-num">.05</div>
