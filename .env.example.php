@@ -7,5 +7,6 @@ return [
 	'TIMEZONE' => 'Europe/Istanbul',
 	'LOCALE' => 'tr_TR',
 	'DEVELOPMENT' => true,
-	'BASE_URL' => ''
+	'BASE_URL' => '',
+	'BASE_FOLDER' => ''
 ];
