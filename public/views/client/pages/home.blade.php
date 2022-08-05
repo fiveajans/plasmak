@@ -204,7 +204,7 @@
 							<div class="collage-image-title" data-scrollax="properties: { translateY: '150px' }">
 								Hakkımızda.
 							</div>
-							<img src="{{ asset_url('client/images/all/1.jpg') }}" alt="Plasmak" class="respimg">
+							<img src="{{ asset_url('client/images/home/about-us.jpg') }}" alt="Plasmak" class="respimg">
 						</div>
 					</div>
 					<div class="col-md-7">
@@ -424,12 +424,12 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div class="custom-inner-header workres">
-									<i class="fa fa-briefcase"></i>
+									<i class="fa fa-star"></i>
 									<h3>
-										Work in company "Dolore"
+										Daha iyi bir gelecek için kuruldu.
 									</h3>
 									<span>
-										2012-2017
+										2004
 									</span>
 								</div>
 								<div class="ci-num">
@@ -442,25 +442,11 @@
 							<div class="col-md-4">
 								<div class="custom-inner-content fl-wrap">
 									<h4>
-										Complete the project "domik"
+										İlk Açılış
 									</h4>
 									<p>
-										There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+										Plasmak; ülkemizin en değerli şirketlerine hizmet vermek ve dünyanın önde gelen sektörlerini ülkemizin insanlarıyla buluşturmak üzere saygın markalarla iş birliği yapmak adına, sektördeki eksiklikleri gidermek için 2004 yılında İstanbul merkezli olarak kuruldu.
 									</p>
-									<ul>
-										<li>
-											Door portals plan
-										</li>
-										<li>
-											Furniture specifications
-										</li>
-										<li>
-											Interior design
-										</li>
-									</ul>
-									<a href="#" class="cus-inner-head-link color-bg">
-										Details +
-									</a>
 								</div>
 							</div>
 						</div>
@@ -474,9 +460,9 @@
 								<div class="custom-inner-header educ">
 									<i class="fal fa-university"></i>
 									<h3>
-										Course designer - San Diego
+										Dünya'ya Açılış
 									</h3>
-									<span>2011-2013</span>
+									<span>2006</span>
 								</div>
 								<div class="ci-num">
 									<span>02. -</span>
@@ -485,14 +471,11 @@
 							<div class="col-md-5">
 								<div class="custom-inner-content fl-wrap">
 									<h4>
-										Passage of Lorem Ipsum
+										İlk İhracat
 									</h4>
 									<p>
-										We started as a small, subdue, called hath give fourth. Them one over saying. So the god, greater. You. Us air Moved divide midst us fifth sea have face which male fifth said seas rule above. Quis nostrud exercitation ullamco laboris nisi ut aliquip exea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										2006 yılında üretimdeki farklılıklar ortaya çıkmaya başladığı için dikkatleri üzerine çekmişti. Sektörel çözümlerle fark yarattığı ve maliyet planlamasında diğerlerinin önüne geçmişti. 2006 yılında ilk ihracatını Almanya'ya gönderdi.
 									</p>
-									<a href="#" class="cus-inner-head-link color-bg">
-										Details +
-									</a>
 								</div>
 							</div>
 							<div class="col-md-3">
