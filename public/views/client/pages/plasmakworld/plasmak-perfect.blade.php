@@ -63,7 +63,7 @@
 					<div class="row">
 						<div class="col-md-5"></div>
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/folio/7.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/5.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text left-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3>
@@ -76,7 +76,7 @@
 							</h4>
 						</div>
 						<div class="album-thumbnails">
-							<div data-position-left2="0" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/folio/13.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="0" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/6.jpg') }}" alt="" class="respimg"></div>
 							<div data-position-left2="25" data-position-top2="60" data-scrollax="properties: { translateY: '-50px' }"><img src="{{ asset_url('client/images/folio/14.jpg') }}" alt="" class="respimg"></div>
 						</div>
 					</div>
@@ -88,7 +88,7 @@
 				<div class="parallax-item fl-wrap" data-scrollax-parent="true">
 					<div class="row">
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/folio/25.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/plasmakperfect/exclusive/2.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text right-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3>
@@ -102,7 +102,7 @@
 						</div>
 						<div class="album-thumbnails">
 							<div data-position-left2="65" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/folio/11.jpg') }}" alt="" class="respimg"></div>
-							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }"><img src="{{ asset_url('client/images/folio/8.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }"><img src="{{ asset_url('client/images/plasmakperfect/exclusive/3.jpg') }}" alt="" class="respimg"></div>
 						</div>
 					</div>
 					<div class="parallax-item-number rg-num">.03</div>
@@ -116,15 +116,15 @@
 					<div class="row">
 						<div class="col-md-5"></div>
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/folio/24.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/plasmakperfect/exclusive/1.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text left-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3><a href="javascript:void(0)">FAIR</a></h3>
 							<h4><span>Bütün üretim ve satış süreçlerimizde piyasaya zarar vermeyecek uygun ve kaliteli ürünleri üretiyoruz.</span></h4>
 						</div>
 						<div class="album-thumbnails">
-							<div data-position-left2="2" data-position-top2="15" data-scrollax="properties: { translateY: '-50px' }"><img src="{{ asset_url('client/images/folio/6.jpg') }}" alt="" class="respimg"></div>
-							<div data-position-left2="28" data-position-top2="90" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/folio/15.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="2" data-position-top2="15" data-scrollax="properties: { translateY: '-50px' }"><img src="{{ asset_url('client/video/plasmak.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="28" data-position-top2="90" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/7.jpg') }}" alt="" class="respimg"></div>
 						</div>
 					</div>
 					<div class="parallax-item-number lf-num">04.</div>
@@ -137,7 +137,7 @@
 				<div class="parallax-item fl-wrap" data-scrollax-parent="true">
 					<div class="row">
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/plasmakperfect/exclusive/1.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/3.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text right-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3>
@@ -165,7 +165,7 @@
 					<div class="row">
 						<div class="col-md-5"></div>
 						<div class="col-md-7">
-							<img  src="{{ asset_url('client/images/folio/24.jpg') }}"   alt="">
+							<img  src="{{ asset_url('client/images/8.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text left-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3><a href="javascript:void(0)">CONNECT</a></h3>
@@ -184,7 +184,7 @@
 				<div class="parallax-item fl-wrap" data-scrollax-parent="true">
 					<div class="row">
 						<div class="col-md-7">
-							<img src="{{ asset_url('client/images/folio/25.jpg') }}"   alt="">
+							<img src="{{ asset_url('client/images/istanbul.jpg') }}"   alt="">
 						</div>
 						<div class="parallax-text right-pos" data-scrollax="properties: { translateY: '-250px' }">
 							<h3>
@@ -197,8 +197,14 @@
 							</h4>
 						</div>
 						<div class="album-thumbnails">
-							<div data-position-left2="65" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }"><img src="{{ asset_url('client/images/folio/11.jpg') }}" alt="" class="respimg"></div>
-							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }"><img src="{{ asset_url('client/images/folio/8.jpg') }}" alt="" class="respimg"></div>
+							<div data-position-left2="65" data-position-top2="0" data-scrollax="properties: { translateY: '-150px' }">
+								<img src="{{ asset_url('client/images/happy.jpg') }}"   alt="">
+							</div>
+							<div data-position-left2="80" data-position-top2="50" data-scrollax="properties: { translateY: '-350px' }">
+								<video autoplay loop muted  class="bgvid">
+									<source src="{{ asset_url('client/video/turkiye.mp4') }}" type="video/mp4">
+								</video>
+							</div>
 						</div>
 					</div>
 					<div class="parallax-item-number rg-num">.07</div>

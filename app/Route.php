@@ -22,7 +22,7 @@ $app->router->group('/plasmak-dunyasi', function ($router) {
 
 $app->router->group('/yetkinliklerimiz', function ($router) {
 
-	$router->get('/uretim', 'Client.Competencies@production');
+	//$router->get('/uretim', 'Client.Competencies@production');
 	$router->get('/ar-ge', 'Client.Competencies@arge');
 	$router->get('/teknoloji', 'Client.Competencies@technology');
 	$router->get('/dagitim', 'Client.Competencies@distribution');

@@ -24,7 +24,7 @@
 						Haberler
 					</h2>
 					<p>
-						If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+						Bizimle ve sektörle alakalı bütün haberlere buradan ulaşabilirsiniz.
 					</p>
 					<div class="horizonral-subtitle">
 						<span>Keşfet</span>

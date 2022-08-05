@@ -40,7 +40,7 @@
 					<div class="hidden-works-list fl-wrap">
 
 						<!--   hidden-works-item -->
-						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/bg/2.jpg') }}">
+						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/2.jpg') }}">
 							<div class="hidden-works-item-text">
 								<h3>
 									Hakkımızda
@@ -62,7 +62,7 @@
 						<!-- hidden-works-item end -->
 
 						<!-- hidden-works-item -->
-						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/bg/1.jpg') }}">
+						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/1.jpg') }}">
 							<div class="hidden-works-item-text">
 								<h3>Vizyonumuz</h3>
 								<p>
@@ -76,7 +76,7 @@
 						<!--   hidden-works-item end -->  
 
 						<!--   hidden-works-item -->
-						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/bg/3.jpg') }}">
+						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/video/plasmak.jpg') }}">
 							<div class="hidden-works-item-text">
 								<h3>
 									Misyonumuz
@@ -104,7 +104,7 @@
 						<!--   hidden-works-item end -->
 
 						<!--   hidden-works-item -->
-						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/bg/4.jpg') }}">
+						<div class="hidden-works-item  serv-works-item fl-wrap" data-bgscr="{{ asset_url('client/images/plasmakperfect/exclusive/2.jpg') }}">
 							<div class="hidden-works-item-text">
 								<h3>
 									Değerlerimiz
