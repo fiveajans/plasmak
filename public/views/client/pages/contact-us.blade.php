@@ -194,16 +194,13 @@
 										<div class="verify-wrap">
 											<span class="verify-text">Robot değil misiniz? Türkiye'nin başkenti neresi?</span> 
 											<select name="robot" class="chosen-select" required>
-												<option selected disabled>
-													Şehir Seçiniz
-												</option>
 												<option value="06">
 													Ankara
 												</option>
 												<option value="34">
 													İstanbul
 												</option>
-												<option value="55">
+												<option value="55" selected>
 													Samsun
 												</option>
 												<option value="35">
