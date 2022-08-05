@@ -2,7 +2,7 @@
     "use strict";
     var markerIcon = {
         anchor: new google.maps.Point(22, 16),
-        url: 'images/marker.png',
+        url: '../images/marker.png',
     }
  
     function singleMap() {
@@ -261,7 +261,7 @@
             position: myLatLng,
             map: single_map,
             icon: markerIcon,
-            title: 'Our office  - New York City'
+            title: 'Plasmak - İstanbul'
         });
     }
     var single_map = document.getElementById('singleMap');
