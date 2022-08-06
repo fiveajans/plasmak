@@ -165,7 +165,7 @@
 								Daha Fazlası İçin
 							</h4>
 							<div class="clearfix"></div>
-							<a href="#" class="btn float-btn flat-btn color-btn mar-top">
+							<a href="{{ site_url('urunlerimiz') }}" class="btn float-btn flat-btn color-btn mar-top">
 								Ürünleri Keşfet
 							</a>
 						</div>
