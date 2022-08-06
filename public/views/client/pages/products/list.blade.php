@@ -28,16 +28,13 @@
 			<div class="container">
 				<div class="section-title">
 					<h2>
-						Our
-						<span>realized</span>
-						<br>
-						and future projects
+						<span>Ürünlerimiz</span>
 					</h2>
 					<p>
-						If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+						Güncel ürünlerimizle ilgili bilgilere buradan ulaşabilirsiniz.
 					</p>
 					<div class="horizonral-subtitle">
-						<span>Ürünler</span>
+						<span>Keşfet</span>
 					</div>
 				</div>
 				<a href="#sec1" class="custom-scroll-link hero-start-link">
@@ -56,69 +53,79 @@
 			</div>
 			<div class="container">
 
-				<!-- filter -->
-				<div class="filter-holder inline-filter fl-wrap  mar-bottom">
-					<div class="filter-button"><i class="fal fa-filter"></i> <span>Filtrele</span></div>
-					<div class="gallery-filters">
-						<a href="#" class="gallery-filter gallery-filter-active" data-filter="*">
-							Hepsi
-						</a>
+				@if ($products->rowCount())
 
-						@foreach ($categories as $category)
-
-							<a href="#" class="gallery-filter" data-filter=".{{ $category->slug }}">
-								{{ $category->name }}
+					<!-- filter -->
+					<div class="filter-holder inline-filter fl-wrap  mar-bottom">
+						<div class="filter-button"><i class="fal fa-filter"></i> <span>Filtrele</span></div>
+						<div class="gallery-filters">
+							<a href="#" class="gallery-filter gallery-filter-active" data-filter="*">
+								Hepsi
 							</a>
 
-						@endforeach
+							@foreach ($categories as $category)
 
-					</div>
-					<div class="folio-counter">
-						<div class="num-album"></div>
-						<div class="all-album"></div>
-					</div>
-				</div>
-				<!-- filter end-->
-
-				<!-- portfolio start -->
-				<div class="gallery-items spad hde three-column">
-
-					@foreach ($products as $product)
-
-						<!-- gallery-item-->
-						<div class="gallery-item {{ $product->category_slug }}">
-							<div class="grid-item-holder">
-								<a href="{{ upload_url('images/original/products/' . $product->image_url) }}" class="fet_pr-carousel-box-media-zoom image-popup">
-									<i class="fal fa-search"></i>
+								<a href="#" class="gallery-filter" data-filter=".{{ $category->slug }}">
+									{{ $category->name }}
 								</a>
-								<img src="{{ upload_url('images/cache/products/800x530/' . $product->image_url) }}" alt="{{ $product->name }}">
-								<div class="box-item hd-box">
-									<div class=" fl-wrap full-height">
-										<div class="hd-box-wrap">
-											<h2>
-												<a href="{{ site_url('urunlerimiz/' . $product->slug) }}">
-													{{ $product->name }}
-												</a>
-											</h2>
-											<!--<p>
-												<a href="#">
-													Design
-												</a>
-												<a href="#">
-													Branding
-												</a>
-											</p>-->
+
+							@endforeach
+
+						</div>
+						<div class="folio-counter">
+							<div class="num-album"></div>
+							<div class="all-album"></div>
+						</div>
+					</div>
+					<!-- filter end-->
+
+					<!-- portfolio start -->
+					<div class="gallery-items spad hde three-column">
+
+						@foreach ($products as $product)
+
+							<!-- gallery-item-->
+							<div class="gallery-item {{ $product->category_slug }}">
+								<div class="grid-item-holder">
+									<a href="{{ upload_url('images/original/products/' . $product->image_url) }}" class="fet_pr-carousel-box-media-zoom image-popup">
+										<i class="fal fa-search"></i>
+									</a>
+									<img src="{{ upload_url('images/cache/products/800x530/' . $product->image_url) }}" alt="{{ $product->name }}">
+									<div class="box-item hd-box">
+										<div class=" fl-wrap full-height">
+											<div class="hd-box-wrap">
+												<h2>
+													<a href="{{ site_url('urunlerimiz/' . $product->slug) }}">
+														{{ $product->name }}
+													</a>
+												</h2>
+												<!--<p>
+													<a href="#">
+														Design
+													</a>
+													<a href="#">
+														Branding
+													</a>
+												</p>-->
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- gallery-item end-->
+							<!-- gallery-item end-->
 
-					@endforeach
+						@endforeach
 
-				</div>
-				<!-- portfolio end -->
+					</div>
+					<!-- portfolio end -->
+
+				@else
+
+					<div class="alert alert-warning">
+						Sistemde kayıtlı ürün bulunamadı.
+					</div>
+
+				@endif
 
 			</div>
 			<div class="sec-lines"></div>
