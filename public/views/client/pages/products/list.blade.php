@@ -28,6 +28,7 @@
 			<div class="container">
 				<div class="section-title">
 					<h2>
+						Üretim &
 						<span>Ürünlerimiz</span>
 					</h2>
 					<p>
