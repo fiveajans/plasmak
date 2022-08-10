@@ -101,4 +101,6 @@ $app->router->group('/api', function ($router) {
 		$router->post('/image', 'Api.Products@image');
 	});
 
+	$router->post('/subscribe', 'Api.Subscribe@submit');
+
 });

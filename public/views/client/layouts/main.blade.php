@@ -20,6 +20,10 @@
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/color.css') }}">
 	<link type="text/css" rel="stylesheet" href="{{ asset_url('client/css/custom.css') }}">
 
+	<script>
+		const API_URL = '{{ site_url('api') }}';
+	</script>
+
 	@yield('styles')
 </head>
 <body>
@@ -266,15 +270,12 @@
 										Sizlere gereksiz e-posta göndermeyeceğimizin sözünü veriyoruz. E-posta kaydını gerçekleştirmeniz halinde işinize yarayacak bilgileri ve kampanyaları anlık olarak sizinle paylaşıyor olacağız.
 									</p>
 									<div class="subcribe-form fl-wrap">
-										<form action="#subscriber" method="post" class="fl-wrap">
-											<input type="email" name="subscribe" placeholder="E-posta adresinizi giriniz" required class="enteremail">
-											<button type="submit" class="subscribe-button">
+										<form class="fl-wrap" onsubmit="return false">
+											<input type="email" name="subscribe" placeholder="E-posta adresinizi giriniz" required class="enteremail" id="email">
+											<button type="button" class="subscribe-button" id="submit">
 												<i class="fal fa-paper-plane"></i>
 												Gönder
 											</button>
-											<label class="subscribe-message">
-												{{ $subscribe ? $subscribe['text'] : null }}
-											</label>
 										</form>
 									</div>
 
@@ -413,6 +414,54 @@
 	<script type="text/javascript" src="{{ asset_url('client/js/jquery.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset_url('client/js/plugins.js') }}"></script>
 	<script type="text/javascript" src="{{ asset_url('client/js/scripts.js') }}"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<script>
+		$('#submit').click(function () {
+			let email = $('#email').val();
+
+			if (email == '') {
+
+				Swal.fire({
+					title: 'Uyarı!',
+					text: 'Lütfen gerçeli bir e-posta adresi giriniz.',
+					icon: 'warning',
+					confirmButtonText: 'Tamam'
+				});
+
+			} else {
+
+				$.post(
+					API_URL + '/subscribe',
+					{ email: email },
+					function (data) {
+
+						if (data == 'success') {
+
+							Swal.fire({
+								title: 'Başarılı!',
+								text: 'E-posta kaydı başarılı bir şekilde oluşturuldu.',
+								icon: 'success',
+								confirmButtonText: 'Tamam'
+							});
+
+						} else {
+
+							Swal.fire({
+								title: 'Hata!',
+								text: 'Bir sorun oluştu ve e-posta kaydınız gerçekleşmedi.',
+								icon: 'error',
+								confirmButtonText: 'Tamam'
+							});
+
+						}
+
+					}
+				);
+
+			}
+		});
+	</script>
 
 	@yield('scripts')
 </body>
