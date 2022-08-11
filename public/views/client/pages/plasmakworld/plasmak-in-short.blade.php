@@ -54,9 +54,9 @@
 								</p>
 								<div class="clearfix"></div>
 								<span class="serv-number">01.</span>
-								<div class="serv-icon">
+								<!--<div class="serv-icon">
 									<i class="fal fa-desktop"></i>
-								</div>
+								</div>-->
 							</div>
 						</div>
 						<!-- hidden-works-item end -->
@@ -70,7 +70,9 @@
 								</p>
 								<div class="clearfix"></div>
 								<span class="serv-number">02.</span>
-								<div class="serv-icon"><i class="fal fa-mobile-android"></i></div>
+								<!--<div class="serv-icon">
+									<i class="fal fa-mobile-android"></i>
+								</div>-->
 							</div>
 						</div>
 						<!--   hidden-works-item end -->  
@@ -98,7 +100,9 @@
 								</p>
 								<div class="clearfix"></div>
 								<span class="serv-number">03.</span>
-								<div class="serv-icon"><i class="fab fa-pagelines"></i></div>
+								<!--<div class="serv-icon">
+									<i class="fab fa-pagelines"></i>
+								</div>-->
 							</div>
 						</div>
 						<!--   hidden-works-item end -->
@@ -172,7 +176,9 @@
 								</p>
 								<div class="clearfix"></div>
 								<span class="serv-number">04.</span>
-								<div class="serv-icon"><i class="fal fa-shopping-bag"></i></div>
+								<!--<div class="serv-icon">
+									<i class="fal fa-shopping-bag"></i>
+								</div>-->
 							</div>
 						</div>
 						<!--   hidden-works-item end -->
