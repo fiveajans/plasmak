@@ -210,7 +210,7 @@
 		<section data-scrollax-parent="true" id="sec2">
 			<div class="section-subtitle" data-scrollax="properties: { translateY: '-250px' }">
 				<span>//</span>
-				Words About
+				Hakkımızda
 			</div>
 			<div class="container">
 				<div class="row">
